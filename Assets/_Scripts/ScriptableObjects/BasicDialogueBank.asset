@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5c043c0960c1f4ebe01c062365752f, type: 3}
+  m_Name: BasicDialogueBank
+  m_EditorClassIdentifier: 
+  bootLines:
+  - dialogue: Hi there.
+    voiceline: {fileID: 0}
+    duration: 1
+    triggerEvent: 0
+    condition: 1
+  - dialogue: 'Please select a language:'
+    voiceline: {fileID: 0}
+    duration: 2
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "Just kidding. That\u2019s not possible yet, sorry..."
+    voiceline: {fileID: 0}
+    duration: 2
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "Here, you can change the \u2600 brightness though!"
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "Do you want to disable \U0001F4A1 flashing lights & \U0001F4A5 screen
+      effects?"
+    voiceline: {fileID: 0}
+    duration: 4
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "You can change any of these settings via the \u23F8 Pause Menu."
+    voiceline: {fileID: 0}
+    duration: 4
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "I noticed that you\u2019re using a \u2328 keyboard."
+    voiceline: {fileID: 0}
+    duration: 4
+    triggerEvent: 0
+    condition: 1
+  - dialogue: Use the [ W ][ A ][ S ] & [ D ] keys to move around, and [ SPACE BAR
+      ] to jump.
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 1
+  - dialogue: 
+    voiceline: {fileID: 0}
+    duration: 4
+    triggerEvent: 1
+    condition: 1
+  darknessLines:
+  - dialogue: 
+    voiceline: {fileID: 0}
+    duration: 0.1
+    triggerEvent: 0
+    condition: 1
+  - dialogue: Wow. It's uhhh, dark.
+    voiceline: {fileID: 0}
+    duration: 1
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "I guess that's what happens when you turn off \u2600 brightness...."
+    voiceline: {fileID: 0}
+    duration: 2
+    triggerEvent: 0
+    condition: 1
+  - dialogue: ' '
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 1
+    condition: 1
+  - dialogue: Yep. Still dark.
+    voiceline: {fileID: 0}
+    duration: 1
+    triggerEvent: 1
+    condition: 1
+  - dialogue: Help
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 1
+  - dialogue: ' '
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 1
+    condition: 1
+  - dialogue: ' '
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 1
+    condition: 1
+  - dialogue: ' '
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 1
+    condition: 1

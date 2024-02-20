@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5f46a18ed5bac4ba8c4443b9ef9188, type: 3}
+  m_Name: TutorialTeamDialogueBank
+  m_EditorClassIdentifier: 
+  introLines:
+  - dialogue: "Oi, vent, vent litt. Vi er ikke helt klare enda. Og med \"vi\" s\xE5
+      mener jeg \"meg.\" To sekund..."
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 1
+  - dialogue: Der har vi litt lys! Vent, det ser kjedelig ut. To flere sekund.
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 1
+    condition: 1
+  - dialogue: Der har vi det. Var det fint? Jeg har lagd det selv. Okei, okey, sjekk
+      det her. Trommevirvel...
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 1
+    condition: 1
+  - dialogue: Tadaaaa! Her er jeg! Jeg heter Devy, og jeg lager spill. Liker du spill?
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 1
+    condition: 1
+  - dialogue: "(Nikk eller rist p\xE5 hodet)"
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 0
+  - dialogue: Kjempebra! Du burde like spill, du er inni ett.
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 0
+  - dialogue: "H\xE6? Hei, kom igjen. Kom igjeeeen. Vi skal ha det fint."
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "Ok, ok. N\xE5 har du sett meg. S\xE5 n\xE5 er det p\xE5 tide \xE5
+      se... Deg!"
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "... Ingenting? Du ser ingenting? Nei, alts\xE5, \xE5 f\xE5 speil til
+      \xE5 funke i spill er litt komplisert. Men bare se for deg hvor kult det hadde
+      v\xE6rt om det funket!"
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 1
+    condition: 1
+  - dialogue: "S\xE5, velkommen til spillet mitt. Det har ikke en tittel enda, men
+      det kommer sikkert senere! "
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "Det var faktisk det jeg h\xE5pet du kunne hjelpe meg med. Spillet
+      er liksom ikke... Ferdig, helt. Men vi kan lage det sammen! Er du med?"
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "(Nikk eller rist p\xE5 hodet)"
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 0
+  - dialogue: Da snakker vi!
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "Kom igjeeeeeen. Ogs\xE5 har du ikke egentlig et valg, s\xE5. "
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    condition: 1
+  - dialogue: "S\xE5, f\xF8rst og fremst s\xE5 m\xE5 du kunne bevege deg. S\xE5,
+      gj\xF8r meg en tjeneste? G\xE5 til denne r\xF8de firkanten her."
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 1
+    condition: 1
+  farmLines:
+  - dialogue: 
+    voiceline: {fileID: 0}
+    duration: 0
+    triggerEvent: 0
+    condition: 1
+  raceLines: []
+  blockLines: []
+  shooterLines: []

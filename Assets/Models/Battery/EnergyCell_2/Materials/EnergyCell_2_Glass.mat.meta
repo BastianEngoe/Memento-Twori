@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a41d0ac3f9837564c8461646f08e05f0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 166830
+  packageName: Energy Cells Free
+  packageVersion: 1.0
+  assetPath: Assets/Energy/Type 2/EnergyCell_2/Materials/EnergyCell_2_Glass.mat
+  uploadId: 363047
