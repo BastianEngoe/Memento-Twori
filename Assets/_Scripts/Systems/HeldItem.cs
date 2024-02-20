@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using System.Collections.Generic;
@@ -131,13 +132,29 @@ public class HeldItem : MonoBehaviour
                         if (PlayerLogic.instance.inventory[j].name == string.Empty)
                         {
                             PlayerLogic.instance.inventory[j] = items.ItemDatabase[i];
+                            Destroy(potentialPickups[0]);
                             potentialPickups.Remove(potentialPickups[0]);
-                            Destroy(heldItem, 0.1f);
-                            HoldInventoryItem(PlayerLogic.instance.inventory[PlayerLogic.instance.itemIndex].model);
+                            Invoke("ClearPickupsForNull", 0.1f);
+                            if(PlayerLogic.instance.itemIndex == j)
+                            {
+                                HoldInventoryItem(PlayerLogic.instance
+                                    .inventory[PlayerLogic.instance.itemIndex].model);
+                            }
                             return;
-                        }
+                        }   
                     }
                 }
+            }
+        }
+    }
+
+    public void ClearPickupsForNull()
+    {
+        for (int i = 0; i < potentialPickups.Count; i++)
+        {
+            if (potentialPickups[i] == null)
+            {
+                potentialPickups.Remove(potentialPickups[i]);
             }
         }
     }
@@ -180,6 +197,8 @@ public class HeldItem : MonoBehaviour
         inventoryItem = null;
         PlayerLogic.instance.inventory[PlayerLogic.instance.itemIndex] = PlayerLogic.instance.empty;
         holdingItem = false;
+        
+        ClearPickupsForNull();
     }
     
     private void OnTriggerEnter(Collider other)
@@ -188,6 +207,7 @@ public class HeldItem : MonoBehaviour
         if (other.CompareTag("PickUp"))
         {
             potentialPickups.Add(other.gameObject);
+            ClearPickupsForNull();
 
             if (other.TryGetComponent<MeshRenderer>(out MeshRenderer mRend))
             {
@@ -228,6 +248,7 @@ public class HeldItem : MonoBehaviour
                 }
             }
             potentialPickups.Remove(other.gameObject);
+            ClearPickupsForNull();
         }
     }
     
@@ -240,12 +261,26 @@ public class HeldItem : MonoBehaviour
                 Destroy(inventoryItem);
             }
             heldItem = item;
-            inventoryItem = Instantiate(heldItem, transform);
+            inventoryItem = Instantiate(item, transform);
         }
         else
         {
             heldItem = null;
         }
+        
+        //If item has a Collider and/or Rigidbody, disable them while held.
+        if(heldItem.TryGetComponent(out Rigidbody itemRB))
+        {
+            itemRB.useGravity = false;
+            itemRB.velocity = Vector3.zero;
+        }
+
+        if (heldItem.TryGetComponent(out Collider itemCollider))
+        {
+            itemCollider.enabled = false;
+        }
+        
+        ClearPickupsForNull();
     }
 
     private void Update()
@@ -273,7 +308,7 @@ public class HeldItem : MonoBehaviour
             //Pick up the potential pick up target.
             if (Input.GetKeyUp(KeyCode.E))
             {
-                if(potentialPickups[0] != null) {PickupItem(potentialPickups[0]);}
+                if(potentialPickups.Count >= 1) {PickupItem(potentialPickups[0]);}
             }
         
             //Drop currently held item.
