@@ -20,11 +20,11 @@ MonoBehaviour:
   - name: Hoe
     icon: {fileID: 21300000, guid: d8158a412e1962e44bceba512a8533cc, type: 3}
     soundEffect: {fileID: 0}
-    model: {fileID: 2233762007800010248, guid: 59179e263dc051c4fb3835aa828544a0, type: 3}
+    model: {fileID: 6483399843328791862, guid: 5398143fa181fcb4093dcaef0ac49a85, type: 3}
   - name: Watering Can
     icon: {fileID: 21300000, guid: 51420dbe8c4ddb84cae8482db4ac0fae, type: 3}
     soundEffect: {fileID: 0}
-    model: {fileID: 8212575708295018699, guid: 82c98ce33acb1934aa017ad2f91716e5, type: 3}
+    model: {fileID: 9074590585776664770, guid: c7fad83dde403d145b11920aedcd644a, type: 3}
   - name: Fishing Pole
     icon: {fileID: 21300000, guid: 83e4bca420bca624298caa4c5b782578, type: 3}
     soundEffect: {fileID: 0}

@@ -103,8 +103,11 @@ public class HeldItem : MonoBehaviour
             if(heldItem.TryGetComponent(out MeshRenderer mRend))
             {
                 matArray2 = matArray.ToList();
-            
-                matArray2.Remove(matArray2[1]);
+
+                if (matArray2.Count >= 2)
+                {
+                    matArray2.Remove(matArray2[1]);
+                }
 
                 matArray = matArray2.ToArray();
 
