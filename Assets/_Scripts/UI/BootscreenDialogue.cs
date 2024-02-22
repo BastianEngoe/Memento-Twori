@@ -8,15 +8,23 @@ using UnityEngine.SceneManagement;
 
 public class BootscreenDialogue : MonoBehaviour
 {
-    [SerializeField] private AudioClip bulbClip;
     [SerializeField] private TMP_Text dialogue;
     [SerializeField] private BasicDialogueBankScriptableObject dialogueBank;
-    private float elapsedTime;
+    public float elapsedTime;
     private int lineIndex, eventIndex, fadeOutCounter;
+    public delegate void LineAdvancedHandler();
+    public event LineAdvancedHandler OnLineAdvanced;
+    private List<bool> initialConditions; // Store the initial conditions of the dialogue lines to reset them when the game is closed or the dialogue is destroyed
+
+
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        initialConditions = new List<bool>();
+        foreach (var line in dialogueBank.bootLines)
+        {
+            initialConditions.Add(line.condition);
+        }
     }
 
     // Update is called once per frame
@@ -29,9 +37,9 @@ public class BootscreenDialogue : MonoBehaviour
             return;
         }
         
-        if (dialogueBank.bootLines[lineIndex].duration == 0)
+        if (dialogueBank.bootLines[lineIndex].duration == 0) // Stops the dialogue from progressing too fast if the duration
         {
-            dialogueBank.bootLines[lineIndex].duration = 3f;
+            dialogueBank.bootLines[lineIndex].duration = 0.2f;
         }
 
         if (elapsedTime >= dialogueBank.bootLines[lineIndex].duration)
@@ -49,6 +57,8 @@ public class BootscreenDialogue : MonoBehaviour
     
     void NextLine(BasicDialogueBankScriptableObject.DialogueLine lineType)
     {
+        OnLineAdvanced?.Invoke(); // Invoke the event to notify subscribers that the dialogue line has advanced. Decouples the dialogue manager from the ClickToContinue script for modularity.
+         
         dialogue.text = lineType.dialogue;
         // if (lineType.voiceline)
         // {
@@ -57,10 +67,9 @@ public class BootscreenDialogue : MonoBehaviour
         //     lineType.duration = lineType.voiceline.length;
         // }
 
-        if (lineType.triggerEvent)
+        if (lineType.triggerEvent && lineIndex > 5)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-           
         }
 
         // if (!lineType.condition)
@@ -73,6 +82,33 @@ public class BootscreenDialogue : MonoBehaviour
         {
             
             Cursor.lockState = CursorLockMode.None; // Change cursor lock mode to unlocked
+        }
+    }
+    
+    public void MeetCurrentCondition()
+    {
+        if (!dialogueBank.bootLines[lineIndex].condition)
+        {
+            dialogueBank.bootLines[lineIndex].condition = true;
+        }
+    }
+
+    public void OnApplicationQuit()
+    {
+        ResetConditions();
+    }
+
+    private void OnDestroy()
+    {
+        ResetConditions();
+    }
+
+    private void ResetConditions()
+    {
+        // Reset the conditions to their initial state
+        for (int i = 0; i < dialogueBank.bootLines.Count; i++)
+        {
+            dialogueBank.bootLines[i].condition = initialConditions[i];
         }
     }
 }

@@ -22,39 +22,45 @@ MonoBehaviour:
     voiceline: {fileID: 0}
     duration: 2
     triggerEvent: 0
-    condition: 1
+    condition: 0
   - dialogue: "Just kidding. That\u2019s not possible yet, sorry..."
     voiceline: {fileID: 0}
     duration: 2
     triggerEvent: 0
-    condition: 1
+    condition: 0
   - dialogue: "Here, you can change the \u2600 brightness though!"
     voiceline: {fileID: 0}
     duration: 3
     triggerEvent: 0
-    condition: 1
+    condition: 0
   - dialogue: "Do you want to disable \U0001F4A1 flashing lights & \U0001F4A5 screen
       effects?"
     voiceline: {fileID: 0}
     duration: 4
     triggerEvent: 0
-    condition: 1
-  - dialogue: "You can change any of these settings via the \u23F8 Pause Menu."
+    condition: 0
+  - dialogue: "Don't worry if you change your mind, you can change any of these settings
+      via the \u23F8 Pause Menu."
     voiceline: {fileID: 0}
     duration: 4
     triggerEvent: 0
-    condition: 1
+    condition: 0
+  - dialogue: 
+    voiceline: {fileID: 0}
+    duration: 4
+    triggerEvent: 0
+    condition: 0
   - dialogue: "I noticed that you\u2019re using a \u2328 keyboard."
     voiceline: {fileID: 0}
     duration: 4
     triggerEvent: 0
-    condition: 1
+    condition: 0
   - dialogue: Use the [ W ][ A ][ S ] & [ D ] keys to move around, and [ SPACE BAR
       ] to jump.
     voiceline: {fileID: 0}
     duration: 3
     triggerEvent: 0
-    condition: 1
+    condition: 0
   - dialogue: 
     voiceline: {fileID: 0}
     duration: 4
