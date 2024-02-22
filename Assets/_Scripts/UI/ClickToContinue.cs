@@ -1,15 +1,24 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class ClickToContinue : MonoBehaviour
 {
     private CanvasGroup canvasGroup;
     [SerializeField] private GameObject dialogueManager;
+    private PlayerInputActions playerControls;
+    private InputAction advanceDialogue;
+
+    private void Awake()
+    {
+        playerControls = new PlayerInputActions();
+    }
 
     private void Start()
     {
+        
         canvasGroup = GetComponent<CanvasGroup>();
         StartCoroutine(FadeInOut());
         dialogueManager.GetComponent<BootscreenDialogue>().OnLineAdvanced += DialogueLineHasAdvanced; // Subscribe to the event to listen for line advancements
@@ -40,7 +49,7 @@ public class ClickToContinue : MonoBehaviour
         }
     }
     
-    public void ClickToSkip()
+    public void ClickToSkip(InputAction.CallbackContext context)
     {
         if (dialogueManager.GetComponent<BootscreenDialogue>().elapsedTime > 1)
         {
@@ -54,6 +63,18 @@ public class ClickToContinue : MonoBehaviour
     private void DialogueLineHasAdvanced()
     {
         StartCoroutine(FadeInOut());
+    }
+    
+    private void OnEnable()
+    {
+        advanceDialogue = playerControls.Misc.AdvanceDialogue;
+        advanceDialogue.Enable();
+        advanceDialogue.performed += ClickToSkip;
+    }
+    
+    private void OnDisable()
+    {
+        advanceDialogue.Disable();
     }
 }
 

@@ -8,8 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Memento-Twori/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Memento-Twori/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NestedParent_Unpack Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NestedParent_Unpack Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootscreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootscreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/IntroRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IntroRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/ClickToContinue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/ClickToContinue.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,8 @@
       <option name="presentableId" value="Default" />
       <updated>1708506158837</updated>
       <workItem from="1708506160881" duration="2734000" />
-      <workItem from="1708611747052" duration="5996000" />
+      <workItem from="1708611747052" duration="6338000" />
+      <workItem from="1708636013679" duration="2398000" />
     </task>
     <servers />
   </component>
