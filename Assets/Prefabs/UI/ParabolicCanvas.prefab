@@ -907,7 +907,7 @@ GameObject:
   m_Layer: 5
   m_Name: DisplayPanel
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: daffb244bbfb2264cbbbb8d845b14e56, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6097,7 +6097,7 @@ GameObject:
   m_Layer: 5
   m_Name: AudioPanel
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 7d27fa67a2ea3364ab882645f8044e8b, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

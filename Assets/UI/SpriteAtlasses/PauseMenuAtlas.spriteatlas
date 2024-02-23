@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PauseMenuAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: f2b648553e8338844b885ef36ba7e070, type: 3}
+    - {fileID: 2800000, guid: 06a0d777a50e34e46a14cb05c7a013ca, type: 3}
+    - {fileID: 2800000, guid: df91fc70addd54e48abed229494ec1bb, type: 3}
+    - {fileID: 2800000, guid: 1ed92d4fe26ef224798fec3672a4afbb, type: 3}
+    - {fileID: 2800000, guid: efa708204855dfa4392e182717e9bba8, type: 3}
+    - {fileID: 2800000, guid: dfb3ef4b02324be4695bcaa6a2efb0ba, type: 3}
+    - {fileID: 2800000, guid: c885ccfbc65aa2d41abc4c3f9a65a841, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - efa708204855dfa4392e182717e9bba8: 21300000
+    - df91fc70addd54e48abed229494ec1bb: 21300000
+    - f2b648553e8338844b885ef36ba7e070: 21300000
+    - 06a0d777a50e34e46a14cb05c7a013ca: 21300000
+    - dfb3ef4b02324be4695bcaa6a2efb0ba: 21300000
+    - c885ccfbc65aa2d41abc4c3f9a65a841: 21300000
+    - 1ed92d4fe26ef224798fec3672a4afbb: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: efa708204855dfa4392e182717e9bba8, type: 3}
+  - {fileID: 21300000, guid: df91fc70addd54e48abed229494ec1bb, type: 3}
+  - {fileID: 21300000, guid: f2b648553e8338844b885ef36ba7e070, type: 3}
+  - {fileID: 21300000, guid: 06a0d777a50e34e46a14cb05c7a013ca, type: 3}
+  - {fileID: 21300000, guid: dfb3ef4b02324be4695bcaa6a2efb0ba, type: 3}
+  - {fileID: 21300000, guid: c885ccfbc65aa2d41abc4c3f9a65a841, type: 3}
+  - {fileID: 21300000, guid: 1ed92d4fe26ef224798fec3672a4afbb, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Paused_Title2
+  - Quit_Button
+  - Settings_Button
+  - Settings_Button_Hover
+  - PausedIcon
+  - Paused_Title
+  - Quit_Button_Hover
+  m_RenderDataMap: {}
+  m_Tag: PauseMenuAtlas
+  m_IsVariant: 0

@@ -43,7 +43,7 @@ public class SFXLevel : MonoBehaviour
             // Get the saved volume from PlayerPrefs and set it to the audio mixer and the slider
             float volume = PlayerPrefs.GetFloat("SFXVolume");
             audioMixer.SetFloat("SFXVolume", volume);
-            SFXSlider.GetComponent<Slider>().value = volume;
+            SFXSlider.GetComponent<Slider>().value = volume + 30;
             
             if (volume <= -39f)
             {
@@ -56,7 +56,7 @@ public class SFXLevel : MonoBehaviour
         {
             PlayerPrefs.SetFloat("SFXVolume", 0);
             audioMixer.SetFloat("SFXVolume", 0);
-            SFXSlider.GetComponent<Slider>().value = 0;
+            SFXSlider.GetComponent<Slider>().value = 0 + 30;
         }
         
         
@@ -64,7 +64,6 @@ public class SFXLevel : MonoBehaviour
 
     public void ToggleSFX()
     {
-        
         
         if (!SFXisMuted)
         {
