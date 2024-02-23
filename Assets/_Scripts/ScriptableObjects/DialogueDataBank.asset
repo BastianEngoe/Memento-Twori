@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introLines:
   - dialogue: Oh, hold on, we're not <i>quite</i> ready yet. By we I mean me.
-    voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
-    duration: 3.030204
+    voiceline: {fileID: 8300000, guid: e0636e1585bc7534399d3479830d4d24, type: 3}
+    duration: 4.824
     triggerEvent: 1
     condition: 1
   - dialogue: "Hi! We\u2019ll be introduced in a second, just let me\u2026"
-    voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
-    duration: 3.030204
-    triggerEvent: 0
+    voiceline: {fileID: 8300000, guid: 31d75600d9c6e794d9a54c9994524c26, type: 3}
+    duration: 4.152
+    triggerEvent: 1
     condition: 1
   - dialogue: There we go! No, wait, that looks boring. Hold on.
     voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
