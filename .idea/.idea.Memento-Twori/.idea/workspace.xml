@@ -5,12 +5,135 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9efc296-d8c7-44f6-88e3-95de3f92e150" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Memento-Twori/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Memento-Twori/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PlayerInputActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootscreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootscreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/IntroRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IntroRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/ClickToContinue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/ClickToContinue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/AudioTab_Active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/AudioTab_Active.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/AudioTab_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/AudioTab_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/AudioTab_Inactive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/AudioTab_Inactive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/BestGameEver_Text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/BestGameEver_Text.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Brightness_Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Brightness_Button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Brightness_Button_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Brightness_Button_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Brightness_Button_Off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Brightness_Button_Off.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Brightness_Text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Brightness_Text.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ControlsTab_Active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ControlsTab_Active.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ControlsTab_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ControlsTab_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ControlsTab_Inactive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ControlsTab_Inactive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/DisplayTab_Active.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/DisplayTab_Active.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/DisplayTab_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/DisplayTab_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/DisplayTab_Inactive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/DisplayTab_Inactive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HighContrastText.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HighContrastText.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HighContrast_Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HighContrast_Button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HighContrast_Button_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HighContrast_Button_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HighContrast_Off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HighContrast_Off.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HighContrast_Off_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/HighContrast_Off_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/LookSensitivity_Icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/LookSensitivity_Icon.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/LookSensitivity_Text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/LookSensitivity_Text.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MomentoTori-PrototypeLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MomentoTori-PrototypeLogo.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MomentoTori-PrototypeLogo_Editable.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MomentoTori-PrototypeLogo_Editable.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MomentoTori_Week2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MomentoTori_Week2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MomentoTori_Week2_Editable.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MomentoTori_Week2_Editable.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MusicToggle_Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MusicToggle_Button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MusicToggle_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/MusicToggle_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Music_Off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Music_Off.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Music_Off_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Music_Off_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Music_Text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Music_Text.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/PauseMenu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/PauseMenu.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/PausedIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/PausedIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/PausedTitle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/PausedTitle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/QuitButton_Default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/QuitButton_Default.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/QuitButton_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/QuitButton_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Quit_Button.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Quit_Button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Quit_Button_Hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Quit_Button_Hover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/RGB_Colorcube_Corner_White.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/RGB_Colorcube_Corner_White.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SFX_Off_Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SFX_Off_Button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SFX_Off_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SFX_Off_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SFX_Toggle_Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SFX_Toggle_Button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SFX_Toggle_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SFX_Toggle_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ScreenEffects_Text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ScreenEffects_Text.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ScreenFX_Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ScreenFX_Button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ScreenFX_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ScreenFX_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ScreenFX_Off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ScreenFX_Off.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ScreenFX_Off_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/ScreenFX_Off_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingTabs_Audio.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingTabs_Audio.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingTabs_Controls.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingTabs_Controls.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingTabs_Display.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingTabs_Display.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingsButton_Default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingsButton_Default.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingsButton_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingsButton_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingsTitle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SettingsTitle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Settings_Button.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Settings_Button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Settings_Button_Hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Settings_Button_Hover.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Settings_Title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Settings_Title.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Settings_Title2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Settings_Title2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SoundEffects_Word.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SoundEffects_Word.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SubtitleSize_Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SubtitleSize_Button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SubtitleSize_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SubtitleSize_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SubtitleSize_Text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SubtitleSize_Text.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Subtitles_Off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Subtitles_Off.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Subtitles_Off_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Subtitles_Off_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/X_Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/X_Button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/X_Button_Hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/X_Button_Hover.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/greenRedTest.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/greenRedTest.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Settings/SFXLevel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Settings/SFXLevel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +231,7 @@
       <workItem from="1708506160881" duration="2734000" />
       <workItem from="1708611747052" duration="6338000" />
       <workItem from="1708636013679" duration="2398000" />
+      <workItem from="1708694553542" duration="140000" />
     </task>
     <servers />
   </component>
