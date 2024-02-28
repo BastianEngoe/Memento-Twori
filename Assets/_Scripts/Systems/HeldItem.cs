@@ -3,6 +3,7 @@ using DG.Tweening;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.Events;
 
 /// <summary>
 /// TO (potentially) DO:
@@ -27,6 +28,9 @@ public class HeldItem : MonoBehaviour
 
     public GameObject inventoryItem;
 
+    public UnityEvent onPickupItem;
+    public UnityEvent onDropItem;
+
     private void Awake()
     {
         instance = this;
@@ -38,6 +42,8 @@ public class HeldItem : MonoBehaviour
         {
             if(!canPickup)  return;
         
+            onPickupItem.Invoke();
+            
             //If already holding an item, drop it first.
             if (heldItem)
             {
@@ -179,6 +185,8 @@ public class HeldItem : MonoBehaviour
         heldItem.transform.parent = null;
         heldItem = null;
         holdingItem = false;
+        
+        onDropItem.Invoke();
     }
 
     public void DropInventoryItem()

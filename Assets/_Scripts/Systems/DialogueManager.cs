@@ -202,7 +202,7 @@ public class DialogueManager : MonoBehaviour
             dialogueBank.introLines[lineIndex].duration = 3f;
         }
 
-        if (dialogueBank.introLines[lineIndex].condition == false)
+        if (dialogueBank.introLines[lineIndex].conditionType == DialogueBankScriptableObject.conditions.NODDING)
         {
             if (!checkingCondition)
             {
@@ -211,6 +211,30 @@ public class DialogueManager : MonoBehaviour
                 checkingCondition = true;
             }
 
+            if(checkingCondition)
+            {
+                elapsedTime = 0;
+            }
+        }
+        
+        if (dialogueBank.introLines[lineIndex].conditionType == DialogueBankScriptableObject.conditions.EXTERNAL)
+        {
+            if (!checkingCondition)
+            {
+                checkingCondition = true;
+                performedCondition = false;
+            }
+            
+            Debug.Log("We here");
+            if (performedCondition)
+            {
+                lineIndex++;
+                NextLine(dialogueBank.introLines[lineIndex]);
+                performedCondition = false;
+                checkingCondition = false;
+                Debug.Log("Lets goooo");
+            }
+            
             if(checkingCondition)
             {
                 elapsedTime = 0;
@@ -237,7 +261,7 @@ public class DialogueManager : MonoBehaviour
             dialogueBank.farmLines[lineIndex].duration = 3f;
         }
 
-        if (dialogueBank.farmLines[lineIndex].condition == false)
+        if (dialogueBank.farmLines[lineIndex].conditionType == DialogueBankScriptableObject.conditions.NODDING)
         {
             if (!checkingCondition)
             {
@@ -246,6 +270,23 @@ public class DialogueManager : MonoBehaviour
                 checkingCondition = true;
             }
 
+            if(checkingCondition)
+            {
+                elapsedTime = 0;
+            }
+        }
+
+        if (dialogueBank.farmLines[lineIndex].conditionType == DialogueBankScriptableObject.conditions.EXTERNAL)
+        {
+            checkingCondition = true;
+            
+            if (performedCondition)
+            {
+                NextLine(dialogueBank.farmLines[lineIndex]);
+                performedCondition = false;
+                checkingCondition = false;
+            }
+            
             if(checkingCondition)
             {
                 elapsedTime = 0;
@@ -272,7 +313,7 @@ public class DialogueManager : MonoBehaviour
             dialogueBank.raceLines[lineIndex].duration = 3f;
         }
 
-        if (dialogueBank.raceLines[lineIndex].condition == false)
+        if (dialogueBank.raceLines[lineIndex].conditionType == DialogueBankScriptableObject.conditions.NODDING)
         {
             if (!checkingCondition)
             {
@@ -307,7 +348,7 @@ public class DialogueManager : MonoBehaviour
             dialogueBank.blockLines[lineIndex].duration = 3f;
         }
 
-        if (dialogueBank.blockLines[lineIndex].condition == false)
+        if (dialogueBank.blockLines[lineIndex].conditionType == DialogueBankScriptableObject.conditions.NODDING)
         {
             if (!checkingCondition)
             {
@@ -342,7 +383,7 @@ public class DialogueManager : MonoBehaviour
             dialogueBank.shooterLines[lineIndex].duration = 3f;
         }
 
-        if (dialogueBank.shooterLines[lineIndex].condition == false)
+        if (dialogueBank.shooterLines[lineIndex].conditionType == DialogueBankScriptableObject.conditions.NODDING)
         {
             if (!checkingCondition)
             {
@@ -363,5 +404,11 @@ public class DialogueManager : MonoBehaviour
             NextLine(dialogueBank.shooterLines[lineIndex]);
             elapsedTime = 0f;
         }
+    }
+
+    public void CheckExternalCondition()
+    {
+        performedCondition = true;
+        Debug.Log("Yoooo");
     }
 }

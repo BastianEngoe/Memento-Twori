@@ -6,6 +6,13 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/DialogueBankScriptableObject", order = 1)]
 public class DialogueBankScriptableObject : ScriptableObject
 {
+    public enum conditions
+    {
+        NONE,
+        NODDING,
+        EXTERNAL
+    }
+    
     [System.Serializable]
     public class DialogueLine
     {
@@ -13,7 +20,7 @@ public class DialogueBankScriptableObject : ScriptableObject
         public AudioClip voiceline;
         public float duration = 3f;
         public bool triggerEvent;
-        public bool condition = true;
+        public conditions conditionType;
     }
     
     public List<DialogueLine> introLines;
