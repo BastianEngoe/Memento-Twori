@@ -5,79 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9efc296-d8c7-44f6-88e3-95de3f92e150" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Memento-Twori/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Memento-Twori/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Documentation.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Documentation.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Editor/CVDFilterEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Editor/CVDFilterEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Editor/CVDFilterEditor.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Editor/CVDFilterEditor.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Editor/CVDFilterEditor.uxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Editor/CVDFilterEditor.uxml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/0_RGB_Colorcube_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/0_RGB_Colorcube_Normal.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/1_RGB_Colorcube_Protanopia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/1_RGB_Colorcube_Protanopia.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/2_RGB_Colorcube_Protanomaly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/2_RGB_Colorcube_Protanomaly.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/3_RGB_Colorcube_Deuteranopia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/3_RGB_Colorcube_Deuteranopia.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/4_RGB_Colorcube_Deuteranomaly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/4_RGB_Colorcube_Deuteranomaly.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/5_RGB_Colorcube_Tritanopia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/5_RGB_Colorcube_Tritanopia.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/6_RGB_Colorcube_Tritanomaly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/6_RGB_Colorcube_Tritanomaly.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/7_RGB_Colorcube_Achromatopsia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/7_RGB_Colorcube_Achromatopsia.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/8_RGB_Colorcube_Achromatomaly.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Images/8_RGB_Colorcube_Achromatomaly.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/0_CVD_Normal.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/0_CVD_Normal.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/1_CVD_Protanopia.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/1_CVD_Protanopia.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/2_CVD_Protanomaly.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/2_CVD_Protanomaly.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/3_CVD_Deuteranopia.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/3_CVD_Deuteranopia.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/4_CVD_Deuteranomaly.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/4_CVD_Deuteranomaly.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/5_CVD_Tritanopia.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/5_CVD_Tritanopia.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/6_CVD_Tritanomaly.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/6_CVD_Tritanomaly.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/7_CVD_Achromatopsia.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/7_CVD_Achromatopsia.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/8_CVD_Achromatomaly.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Profiles/8_CVD_Achromatomaly.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Scripts/CVDFilter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Scripts/CVDFilter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Scripts/CVDProfiles.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Scripts/CVDProfiles.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Scripts/CVDProfilesSO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/Scripts/CVDProfilesSO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/_Demo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/_Demo/DemoScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/_Demo/DemoScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/_Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/_Prefabs/CVDFilter.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CVDFilter/_Prefabs/CVDFilter.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URPSettings/URP-Balanced.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URPSettings/URP-Balanced.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URPSettings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URPSettings/URP-HighFidelity.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URPSettings/URP-Performant.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URPSettings/URP-Performant.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/ScriptableObjects/BasicDialogueBank.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/ScriptableObjects/BasicDialogueBank.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Systems/BasicDialogueBankScriptableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Systems/BasicDialogueBankScriptableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Systems/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Systems/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/BootscreenDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/BootscreenDialogue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/ClickToContinue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/ClickToContinue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/TheDarkness.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/TheDarkness.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootscreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootscreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/SpriteAtlasses/GeneralUIAtlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/SpriteAtlasses/GeneralUIAtlas.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Settings/Brightness.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Settings/Brightness.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +108,7 @@
       <workItem from="1708636013679" duration="2398000" />
       <workItem from="1708694553542" duration="1944000" />
       <workItem from="1708793679761" duration="7205000" />
+      <workItem from="1709215465159" duration="57000" />
     </task>
     <servers />
   </component>

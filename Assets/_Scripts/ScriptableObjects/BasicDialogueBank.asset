@@ -20,12 +20,16 @@ MonoBehaviour:
   - dialogue: "Please adjust the \u2600 brightness so you can barely see the square."
     voiceline: {fileID: 0}
     triggersEventWithName: Show brightness slider
-    canClickToAdvance: 0
+    canClickToAdvance: 1
   - dialogue: "Do you want to disable \U0001F4A1 flashing lights & \U0001F4A5 screen
       effects?"
     voiceline: {fileID: 0}
     triggersEventWithName: Show screen effects option
     canClickToAdvance: 0
+  - dialogue: How far away from the screen are you sitting?
+    voiceline: {fileID: 0}
+    triggersEventWithName: Show FOV setting
+    canClickToAdvance: 1
   - dialogue: "Don't worry if you change your mind, you can change any of these settings
       via the \u23F8 Pause Menu."
     voiceline: {fileID: 0}

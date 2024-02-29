@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Brightness : MonoBehaviour
 {
@@ -33,6 +34,12 @@ public class Brightness : MonoBehaviour
             AdjustBrightness(brightnessValue + 3);
             brightnessSlider.value = brightnessValue + 3;
             resetButton.GetComponent<Button>().interactable = brightnessValue != 0;
+        }
+        
+        if (SceneManager.GetActiveScene().name == "Bootscreen")
+        {
+            brightnessSlider.interactable = true;
+            resetButton.GetComponent<Button>().interactable = true;
         }
     }
 
