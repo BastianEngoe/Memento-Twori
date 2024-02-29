@@ -10,6 +10,7 @@ public class ClickToContinue : MonoBehaviour
     [SerializeField] private GameObject dialogueManager;
     private PlayerInputActions playerControls;
     private InputAction advanceDialogue;
+    private bool canAdvance;
 
     private void Awake()
     {
@@ -20,11 +21,11 @@ public class ClickToContinue : MonoBehaviour
     {
         
         canvasGroup = GetComponent<CanvasGroup>();
-        StartCoroutine(FadeInOut());
-        dialogueManager.GetComponent<BootscreenDialogue>().OnLineAdvanced += DialogueLineHasAdvanced; // Subscribe to the event to listen for line advancements
+        StartCoroutine(FadeInAndOut());
+        dialogueManager.GetComponent<BootscreenDialogue>().OnLineHasAdvanced += DialogueLineHasHasAdvanced; // Subscribe to the event to listen for line advancements
     }
 
-    private IEnumerator FadeInOut()
+    private IEnumerator FadeInAndOut()
     {
         yield return new WaitForSecondsRealtime(2);
         
@@ -38,6 +39,7 @@ public class ClickToContinue : MonoBehaviour
             }
 
             yield return new WaitForSecondsRealtime(0.25f);
+            canAdvance = true;
 
             // Fade out
             for (float t = 0; t <= 1; t += 2 * Time.unscaledDeltaTime)
@@ -51,18 +53,22 @@ public class ClickToContinue : MonoBehaviour
     
     public void ClickToSkip(InputAction.CallbackContext context)
     {
-        if (dialogueManager.GetComponent<BootscreenDialogue>().elapsedTime > 1)
+        if (canAdvance)
         {
             StopAllCoroutines();
             canvasGroup.alpha = 0;
-            dialogueManager.GetComponent<BootscreenDialogue>().MeetCurrentCondition();
+            dialogueManager.GetComponent<BootscreenDialogue>().ClickToNextLine();
+            canAdvance = false;
         }
         
     }
     
-    private void DialogueLineHasAdvanced()
+    private void DialogueLineHasHasAdvanced()
     {
-        StartCoroutine(FadeInOut());
+        if (dialogueManager.GetComponent<BootscreenDialogue>().dialogueBank.bootLines[dialogueManager.GetComponent<BootscreenDialogue>().lineIndex].canClickToAdvance)
+        {
+            StartCoroutine(FadeInAndOut());
+        }
     }
     
     private void OnEnable()

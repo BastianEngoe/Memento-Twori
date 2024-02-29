@@ -26,11 +26,11 @@ namespace SOG.CVDFilter
             root = new VisualElement();
 
             // Import UXML
-            visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/CVDFilter/Editor/CVDFilterEditor.uxml");
+            visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Plugins/CVDFilter/Editor/CVDFilterEditor.uxml");
 
             // A stylesheet can be added to a VisualElement.
             // The style will be applied to the VisualElement and all of its children.
-            styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/CVDFilter/Editor/CVDFilterEditor.uss");
+            styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/Plugins/CVDFilter/Editor/CVDFilterEditor.uss");
             if (styleSheet == null)
             {
                 Debug.LogError("StyleSheet not found at the specified path");

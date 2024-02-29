@@ -1,114 +1,69 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.Globalization;
+using System.Text.RegularExpressions;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.SceneManagement;
 
 public class BootscreenDialogue : MonoBehaviour
 {
     [SerializeField] private TMP_Text dialogue;
-    [SerializeField] private BasicDialogueBankScriptableObject dialogueBank;
-    public float elapsedTime;
-    private int lineIndex, eventIndex, fadeOutCounter;
+    public BasicDialogueBankScriptableObject dialogueBank;
+    public int lineIndex;
+    [SerializeField] private GameObject brightnessCanvas, screenEffectsCanvas;
     public delegate void LineAdvancedHandler();
-    public event LineAdvancedHandler OnLineAdvanced;
-    private List<bool> initialConditions; // Store the initial conditions of the dialogue lines to reset them when the game is closed or the dialogue is destroyed
-
-
-
-    private void Start()
-    {
-        initialConditions = new List<bool>();
-        foreach (var line in dialogueBank.bootLines)
-        {
-            initialConditions.Add(line.condition);
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        elapsedTime += Time.unscaledDeltaTime;
-            
-        if (lineIndex == dialogueBank.bootLines.Count)
-        {
-            return;
-        }
-        
-        if (dialogueBank.bootLines[lineIndex].duration == 0) // Stops the dialogue from progressing too fast if the duration
-        {
-            dialogueBank.bootLines[lineIndex].duration = 0.2f;
-        }
-
-        if (elapsedTime >= dialogueBank.bootLines[lineIndex].duration)
-        {
-            if (!dialogueBank.bootLines[lineIndex].condition)
-            {
-                return;
-            }
-            NextLine(dialogueBank.bootLines[lineIndex]);
-            lineIndex++;
-            elapsedTime = 0f;
-        }
-    }
-    
+    public event LineAdvancedHandler OnLineHasAdvanced;
     
     void NextLine(BasicDialogueBankScriptableObject.DialogueLine lineType)
     {
-        OnLineAdvanced?.Invoke(); // Invoke the event to notify subscribers that the dialogue line has advanced. Decouples the dialogue manager from the ClickToContinue script for modularity.
+        OnLineHasAdvanced?.Invoke(); // Invoke the event to notify subscribers that the dialogue line has advanced. Decouples the dialogue manager from the ClickToContinue script for modularity.
          
         dialogue.text = lineType.dialogue;
-        // if (lineType.voiceline)
-        // {
-        //     GameManager.instance.mascotSpeaker.clip = lineType.voiceline;
-        //     GameManager.instance.mascotSpeaker.Play();
-        //     lineType.duration = lineType.voiceline.length;
-        // }
+        
 
-        if (lineType.triggerEvent && lineIndex > 5)
+        if (lineIndex == dialogueBank.bootLines.Count - 1)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
-        // if (!lineType.condition)
-        // {
-        //     InvokeRepeating("CheckForCondition", 0f, 0.25f);
-        // }
-        
-        
-        if (lineIndex > 2) // Check if line index is greater than two
+        if (dialogueBank.bootLines[lineIndex].triggersEventWithName != null)
         {
+            string eventName = dialogueBank.bootLines[lineIndex].triggersEventWithName;
+            eventName = Regex.Replace(eventName, "_", " "); // Replace underscores with spaces
+            TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+            eventName = textInfo.ToTitleCase(eventName); // Convert to title case
+            eventName = Regex.Replace(eventName, @"\s+", ""); // Remove spaces
             
-            Cursor.lockState = CursorLockMode.None; // Change cursor lock mode to unlocked
+            Invoke(eventName, 0);
         }
     }
     
-    public void MeetCurrentCondition()
+    public void ClickToNextLine()
     {
-        if (!dialogueBank.bootLines[lineIndex].condition)
+        if (dialogueBank.bootLines[lineIndex].canClickToAdvance) // If the line has autoAdvance set to true, advance to the next line
         {
-            dialogueBank.bootLines[lineIndex].condition = true;
+            lineIndex++;
+            NextLine(dialogueBank.bootLines[lineIndex]);
         }
     }
-
-    public void OnApplicationQuit()
+    
+    public void AdvanceToNextLine()
     {
-        ResetConditions();
+        lineIndex++;
+        NextLine(dialogueBank.bootLines[lineIndex]);
     }
-
-    private void OnDestroy()
+    
+    public void ShowBrightnessSlider()
     {
-        ResetConditions();
+       brightnessCanvas.GetComponent<CanvasGroup>().alpha = 1;
+       brightnessCanvas.GetComponent<CanvasGroup>().interactable = true;
+       brightnessCanvas.GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
-
-    private void ResetConditions()
+    
+    public void ShowScreenEffectsOption()
     {
-        // Reset the conditions to their initial state
-        for (int i = 0; i < dialogueBank.bootLines.Count; i++)
-        {
-            dialogueBank.bootLines[i].condition = initialConditions[i];
-        }
+        screenEffectsCanvas.GetComponent<CanvasGroup>().alpha = 1;
+        screenEffectsCanvas.GetComponent<CanvasGroup>().interactable = true;
+        screenEffectsCanvas.GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
+    
 }

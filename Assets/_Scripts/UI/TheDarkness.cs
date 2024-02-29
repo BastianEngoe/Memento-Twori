@@ -35,10 +35,7 @@ public class TheDarkness : MonoBehaviour
 
             if (elapsedTime >= dialogueBank.darknessLines[lineIndex].duration)
             {
-                if (!dialogueBank.darknessLines[lineIndex].condition)
-                {
-                    return;
-                }
+                //Disregard conditionMet for this dialogue
                 NextLine(dialogueBank.darknessLines[lineIndex]);
                 lineIndex++;
                 elapsedTime = 0f;
@@ -46,26 +43,15 @@ public class TheDarkness : MonoBehaviour
         }
     }
     
-    void NextLine(BasicDialogueBankScriptableObject.DialogueLine lineType)
+    void NextLine(BasicDialogueBankScriptableObject.DialogueLineDarkness lineType)
     {
         dialogue.text = lineType.dialogue;
-        // if (lineType.voiceline)
-        // {
-        //     GameManager.instance.mascotSpeaker.clip = lineType.voiceline;
-        //     GameManager.instance.mascotSpeaker.Play();
-        //     lineType.duration = lineType.voiceline.length;
-        // }
-
-        if (lineType.triggerEvent)
+        
+        if (lineType.triggerEvent) // If the line has a trigger event, undarken the screen
         {
             FadeOut();
             lineIndex++;
         }
-
-        // if (!lineType.condition)
-        // {
-        //     InvokeRepeating("CheckForCondition", 0f, 0.25f);
-        // }
     }
 
     public void InvokeTheDarkness()

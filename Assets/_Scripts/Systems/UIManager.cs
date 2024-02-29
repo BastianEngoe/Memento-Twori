@@ -6,7 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
