@@ -15,7 +15,7 @@ public class Brightness : MonoBehaviour
     
     void Start()
     {
-        volumePostProcess = GameObject.Find("MainCamera").GetComponent<Volume>();
+        volumePostProcess = Camera.main.GetComponent<Volume>();
         
         if (!brightnessSlider)
         {

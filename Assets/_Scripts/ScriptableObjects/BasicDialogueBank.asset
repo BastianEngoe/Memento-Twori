@@ -25,7 +25,12 @@ MonoBehaviour:
       effects?"
     voiceline: {fileID: 0}
     triggersEventWithName: Show screen effects option
-    canClickToAdvance: 0
+    canClickToAdvance: 1
+  - dialogue: If you have difficulties with sight, I recommend enabling High Contrast
+      mode
+    voiceline: {fileID: 0}
+    triggersEventWithName: Show high contrast option
+    canClickToAdvance: 1
   - dialogue: How far away from the screen are you sitting?
     voiceline: {fileID: 0}
     triggersEventWithName: Show FOV setting

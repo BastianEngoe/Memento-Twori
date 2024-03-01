@@ -7,6 +7,7 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScreenEffects : MonoBehaviour
@@ -29,13 +30,28 @@ public class ScreenEffects : MonoBehaviour
         cycleSpriteOnClick = screenFXButton.GetComponent<CycleSpriteOnClick>(); //Using a coroutine because game is paused
         
         mainCam = Camera.main;
-        UAC = mainCam.GetComponent<UniversalAdditionalCameraData>();
-        postProcessVolume = mainCam.GetComponent<Volume>();
-        postProcessVolumeProfile = postProcessVolume.profile;
+        if(SceneManager.GetActiveScene().buildIndex == 0) UAC = mainCam.GetComponent<UniversalAdditionalCameraData>();
+        if(SceneManager.GetActiveScene().buildIndex == 0) postProcessVolume = mainCam.GetComponent<Volume>();
+        if(SceneManager.GetActiveScene().buildIndex == 0) postProcessVolumeProfile = postProcessVolume.profile;
         
         if (!screenFXButton)
         {
             screenFXButton = GameObject.Find("ScreenFX_Button");
+            if (!screenFXButton)
+            {
+                Debug.LogWarning("ScreenFX_Button reference is not set in this GameObject " + gameObject.name);
+            }
+
+        }
+
+        if (!pausedIcon)
+        {
+            pausedIcon = GameObject.Find("Paused_Icon");
+            
+            if (!pausedIcon)
+            {
+                
+            }
         }
         
         if (!PlayerPrefs.HasKey("ScreenEffects"))
@@ -98,11 +114,14 @@ public class ScreenEffects : MonoBehaviour
         }
         else
         {
-            Debug.LogError("PlayerFollowCamera GameObject is not found or not active.");
+            if (SceneManager.GetActiveScene().buildIndex != 0)
+            {
+                Debug.LogError("PlayerFollowCamera GameObject is not found or not active.");
+            }
         }
         
-        pausedIcon.GetComponent<PauseMenuButtons>().enabled = screenEffectsEnabled;
-        pausedIcon.GetComponent<Image>().color = screenEffectsEnabled ? new Color(1, 1, 1, 0) : new Color(1, 1, 1, 1);
+        if (pausedIcon) pausedIcon.GetComponent<PauseMenuButtons>().enabled = screenEffectsEnabled;
+        if (pausedIcon) pausedIcon.GetComponent<Image>().color = screenEffectsEnabled ? new Color(1, 1, 1, 0) : new Color(1, 1, 1, 1);
     }
     
 }

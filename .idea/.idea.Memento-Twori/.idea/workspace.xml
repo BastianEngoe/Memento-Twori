@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9efc296-d8c7-44f6-88e3-95de3f92e150" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Memento-Twori/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Memento-Twori/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootscreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootscreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/SpriteAtlasses/GeneralUIAtlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/SpriteAtlasses/GeneralUIAtlas.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/ScriptableObjects/BasicDialogueBank.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/ScriptableObjects/BasicDialogueBank.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Settings/Brightness.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Settings/Brightness.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Settings/HighContrast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Settings/HighContrast.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Settings/LookSensitivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Settings/LookSensitivity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Settings/ScreenEffects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Settings/ScreenEffects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Systems/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Systems/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/BootscreenDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/BootscreenDialogue.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +37,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -108,7 +115,10 @@
       <workItem from="1708636013679" duration="2398000" />
       <workItem from="1708694553542" duration="1944000" />
       <workItem from="1708793679761" duration="7205000" />
-      <workItem from="1709215465159" duration="57000" />
+      <workItem from="1709215465159" duration="656000" />
+      <workItem from="1709289501852" duration="1129000" />
+      <workItem from="1709290694433" duration="2370000" />
+      <workItem from="1709313852893" duration="1087000" />
     </task>
     <servers />
   </component>

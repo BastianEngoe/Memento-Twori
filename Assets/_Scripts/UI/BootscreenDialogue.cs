@@ -9,9 +9,20 @@ public class BootscreenDialogue : MonoBehaviour
     [SerializeField] private TMP_Text dialogue;
     public BasicDialogueBankScriptableObject dialogueBank;
     public int lineIndex;
-    [SerializeField] private GameObject brightnessCanvas, screenEffectsCanvas;
+    [SerializeField] private GameObject brightnessCanvas, screenEffectsCanvas, highContrastCanvas, FOVcanvas;
+    private CanvasGroup brightnessCanvasGroup, screenEffectsCanvasGroup, highContrastCanvasGroup, FOVcanvasGroup;
+
     public delegate void LineAdvancedHandler();
     public event LineAdvancedHandler OnLineHasAdvanced;
+    
+    
+    private void Awake() // Assign the canvas groups to their respective canvas game objects for optimization
+    {
+        brightnessCanvasGroup = brightnessCanvas.GetComponent<CanvasGroup>();
+        screenEffectsCanvasGroup = screenEffectsCanvas.GetComponent<CanvasGroup>();
+        highContrastCanvasGroup = highContrastCanvas.GetComponent<CanvasGroup>();
+        FOVcanvasGroup = FOVcanvas.GetComponent<CanvasGroup>();
+    }
     
     void NextLine(BasicDialogueBankScriptableObject.DialogueLine lineType)
     {
@@ -51,19 +62,44 @@ public class BootscreenDialogue : MonoBehaviour
         lineIndex++;
         NextLine(dialogueBank.bootLines[lineIndex]);
     }
-    
+   
+
     public void ShowBrightnessSlider()
     {
-       brightnessCanvas.GetComponent<CanvasGroup>().alpha = 1;
-       brightnessCanvas.GetComponent<CanvasGroup>().interactable = true;
-       brightnessCanvas.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        SetCanvasGroupState(brightnessCanvasGroup, true);
+        SetCanvasGroupState(screenEffectsCanvasGroup, false);
+        SetCanvasGroupState(highContrastCanvasGroup, false);
+        SetCanvasGroupState(FOVcanvasGroup, false);
     }
-    
+
     public void ShowScreenEffectsOption()
     {
-        screenEffectsCanvas.GetComponent<CanvasGroup>().alpha = 1;
-        screenEffectsCanvas.GetComponent<CanvasGroup>().interactable = true;
-        screenEffectsCanvas.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        SetCanvasGroupState(screenEffectsCanvasGroup, true);
+        SetCanvasGroupState(brightnessCanvasGroup, false);
+        SetCanvasGroupState(highContrastCanvasGroup, false);
+        SetCanvasGroupState(FOVcanvasGroup, false);
     }
-    
+
+    public void ShowHighContrastOption()
+    {
+        SetCanvasGroupState(screenEffectsCanvasGroup, false);
+        SetCanvasGroupState(brightnessCanvasGroup, false);
+        SetCanvasGroupState(highContrastCanvasGroup, true);
+        SetCanvasGroupState(FOVcanvasGroup, false);
+    }
+
+    public void ShowFOVCanvas()
+    {
+        SetCanvasGroupState(screenEffectsCanvasGroup, false);
+        SetCanvasGroupState(brightnessCanvasGroup, false);
+        SetCanvasGroupState(highContrastCanvasGroup, false);
+        SetCanvasGroupState(FOVcanvasGroup, true);
+    }
+
+    private void SetCanvasGroupState(CanvasGroup canvasGroup, bool state)
+    {
+        canvasGroup.alpha = state ? 1 : 0;
+        canvasGroup.interactable = state;
+        canvasGroup.blocksRaycasts = state;
+    }
 }

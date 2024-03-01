@@ -37,11 +37,11 @@ public class HighContrast : MonoBehaviour
             // Check if the HighContrast value is 0 in PlayerPrefs. If so, change the button sprite to the disabled sprite
             if (PlayerPrefs.GetInt("HighContrast") == 1)
             {
-                cycleSpriteOnClick.StartCoroutine(cycleSpriteOnClick.ChangeToEnabledSprite());
+                if(highContrastToggleButton) cycleSpriteOnClick.StartCoroutine(cycleSpriteOnClick.ChangeToEnabledSprite());
             }
             else
             {
-                cycleSpriteOnClick.StartCoroutine(cycleSpriteOnClick.ChangeToDisabledSprite());
+                if(highContrastToggleButton) cycleSpriteOnClick.StartCoroutine(cycleSpriteOnClick.ChangeToDisabledSprite());
             }
         }
         else

@@ -21,13 +21,13 @@ public class LookSensitivity : MonoBehaviour
         if (PlayerPrefs.HasKey("LookSensitivity"))
         {
             lookSensitivity = PlayerPrefs.GetInt("LookSensitivity");
-            lookSensitivitySlider.GetComponent<UnityEngine.UI.Slider>().value = lookSensitivity;
+            if (lookSensitivitySlider) lookSensitivitySlider.GetComponent<UnityEngine.UI.Slider>().value = lookSensitivity;
         }
         else
         {
             lookSensitivity = 5;
             PlayerPrefs.SetInt("LookSensitivity", 5);
-            lookSensitivitySlider.GetComponent<UnityEngine.UI.Slider>().value = lookSensitivity;
+            if (lookSensitivitySlider) lookSensitivitySlider.GetComponent<UnityEngine.UI.Slider>().value = lookSensitivity;
         }
         SetLookSensitivity(lookSensitivity);
     }
@@ -40,7 +40,7 @@ public class LookSensitivity : MonoBehaviour
 
     private void SetLookSensitivity(int sensitivity)
     {
-        player.GetComponent<FirstPersonController>().RotationSpeed = sensitivity * 0.2f;
+        if (player) player.GetComponent<FirstPersonController>().RotationSpeed = sensitivity * 0.2f;
         PlayerPrefs.SetInt("LookSensitivity", lookSensitivity);
     }
 }
