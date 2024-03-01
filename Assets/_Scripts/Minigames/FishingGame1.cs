@@ -22,6 +22,11 @@ public class FishingGame1 : MonoBehaviour
 
     public fishState currentFishState;
 
+    private void Start()
+    {
+        FishMegaGameController.instance.instructions.text = "Hook it!";
+    }
+
     private void Update()
     {
         if (hookSlider.value > 0.97f)
@@ -38,28 +43,34 @@ public class FishingGame1 : MonoBehaviour
             hookValue = Mathf.Lerp(0, 1, t);
             hookSlider.value = hookValue;
 
-            t -= hookSpeed * Time.deltaTime;
+            t -= hookSpeed * Time.deltaTime * FishMegaGameController.instance.masterSpeed;
         }
         else if (currentFishState == fishState.UP)
         {
             hookValue = Mathf.Lerp(0, 1, t);
             hookSlider.value = hookValue;
 
-            t += hookSpeed * Time.deltaTime;
+            t += hookSpeed * Time.deltaTime * FishMegaGameController.instance.masterSpeed;
         }
 
         if (Input.GetMouseButtonUp(0))
         {
             currentFishState = fishState.DONE;
 
-            if (hookValue < 0.63f && hookValue > 0.41)
+            if (hookValue < 0.8f && hookValue > 0.2f)
             {
-                Debug.Log("Fish!");
+                if (hookValue < 0.6f && hookValue > 0.4)
+                {
+                    FishMegaGameController.instance.currentScore += 100;
+                }
+                else
+                {
+                    FishMegaGameController.instance.currentScore += 50;
+                }   
             }
-            else
-            {
-                Debug.Log("No fish :C");
-            }
+          
+            
+            FishMegaGameController.instance.NextMinigame();
         }
     }
 }
