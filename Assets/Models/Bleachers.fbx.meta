@@ -3,7 +3,12 @@ guid: e1def8d49fa3ac345ab3f4e35b5cdc43
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bleachers
+    second: {fileID: 2100000, guid: 69bbd99c874e6694c8d77d55d2778082, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
