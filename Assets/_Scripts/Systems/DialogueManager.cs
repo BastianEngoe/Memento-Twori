@@ -51,6 +51,10 @@ public class DialogueManager : MonoBehaviour
         {
             NextLine(dialogueBank.shooterLines[lineIndex]);
         }
+        if (GameManager.instance.curRoom == GameManager.Rooms.CAPSTONETUTORIAL)
+        {
+            NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
+        }
     }
 
     void Update()
@@ -81,6 +85,9 @@ public class DialogueManager : MonoBehaviour
 
             case GameManager.Rooms.SHOOTER:
                 UpdateShooterRoom();
+                break;
+            case GameManager.Rooms.CAPSTONETUTORIAL:
+                UpdateCapstoneTutorialRoom();
                 break;
         }
         elapsedTime += Time.deltaTime;
@@ -147,7 +154,12 @@ public class DialogueManager : MonoBehaviour
             {
                 NextLine(dialogueBank.shooterLines[lineIndex]);
             }
-            
+            if (GameManager.instance.curRoom == GameManager.Rooms.CAPSTONETUTORIAL)
+            {
+                NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
+            }
+
+
             StopCoroutine(CheckForCondition(conditionLine));
         }
 
@@ -179,7 +191,11 @@ public class DialogueManager : MonoBehaviour
             {
                 NextLine(dialogueBank.shooterLines[lineIndex]);
             }
-            
+            if (GameManager.instance.curRoom == GameManager.Rooms.CAPSTONETUTORIAL)
+            {
+                NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
+            }
+
             StopCoroutine(CheckForCondition(conditionLine));
         }
 
@@ -403,6 +419,47 @@ public class DialogueManager : MonoBehaviour
             lineIndex++;
             NextLine(dialogueBank.shooterLines[lineIndex]);
             elapsedTime = 0f;
+        }
+    }
+
+    private void UpdateCapstoneTutorialRoom()
+    {
+        if (lineIndex == dialogueBank.capstoneTutorialLines.Count - 1)
+        {
+            return;
+        }
+
+        if (dialogueBank.capstoneTutorialLines[lineIndex].duration == 0)
+        {
+            dialogueBank.capstoneTutorialLines[lineIndex].duration = 3f;
+        }
+
+        if (dialogueBank.capstoneTutorialLines[lineIndex].conditionType == DialogueBankScriptableObject.conditions.NODDING)
+        {
+            if (!checkingCondition)
+            {
+                StartCoroutine(CheckForCondition(dialogueBank.capstoneTutorialLines[lineIndex]));
+                performedCondition = false;
+                checkingCondition = true;
+            }
+
+            if (checkingCondition)
+            {
+                elapsedTime = 0;
+            }
+        }
+
+        if (elapsedTime >= dialogueBank.capstoneTutorialLines[lineIndex].duration)
+        {
+            lineIndex++;
+            NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
+            elapsedTime = 0f;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+            lineIndex++;
+            NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
         }
     }
 

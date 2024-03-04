@@ -28,4 +28,5 @@ public class DialogueBankScriptableObject : ScriptableObject
     public List<DialogueLine> raceLines;
     public List<DialogueLine> blockLines;
     public List<DialogueLine> shooterLines;
+    public List<DialogueLine> capstoneTutorialLines;
 }

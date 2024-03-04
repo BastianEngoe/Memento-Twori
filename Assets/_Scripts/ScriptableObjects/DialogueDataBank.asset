@@ -121,3 +121,87 @@ MonoBehaviour:
   raceLines: []
   blockLines: []
   shooterLines: []
+  capstoneTutorialLines:
+  - dialogue: "Oi, vent, vent litt. Vi er ikke helt klare enda. Og med \"vi\" s\xE5
+      mener jeg \"meg.\" To sekund..."
+    voiceline: {fileID: 8300000, guid: 8c2da349a42c9e640b6506a22a787714, type: 3}
+    duration: 7.08
+    triggerEvent: 0
+    conditionType: 0
+  - dialogue: Der har vi litt lys! Vent, det ser kjedelig ut. To flere sekund.
+    voiceline: {fileID: 8300000, guid: c6704d164b7224648a414ec9ab844f2c, type: 3}
+    duration: 4.464
+    triggerEvent: 1
+    conditionType: 0
+  - dialogue: Der har vi det. Var det fint? Jeg har lagd det selv. Okei, okey, sjekk
+      det her. Trommevirvel...
+    voiceline: {fileID: 8300000, guid: 748345f581439f44295e3a100e5cc2d0, type: 3}
+    duration: 9.936
+    triggerEvent: 1
+    conditionType: 0
+  - dialogue: Tadaaaa! Her er jeg! Jeg heter Devy, og jeg lager spill. Liker du spill?
+    voiceline: {fileID: 8300000, guid: 1d787974f17047a44a8f7ab5d3b6d9f9, type: 3}
+    duration: 5.16
+    triggerEvent: 1
+    conditionType: 0
+  - dialogue: "(Nikk eller rist p\xE5 hodet)"
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    conditionType: 1
+  - dialogue: Kjempebra! Du burde like spill, du er inni ett.
+    voiceline: {fileID: 8300000, guid: b54cba3a39295ba4e8a10c6de91cffdb, type: 3}
+    duration: 3.216
+    triggerEvent: 0
+    conditionType: 0
+  - dialogue: "H\xE6? Hei, kom igjen. Kom igjeeeen. Vi skal ha det fint."
+    voiceline: {fileID: 8300000, guid: eafce00e52530054e8ca87d988025b56, type: 3}
+    duration: 4.176
+    triggerEvent: 0
+    conditionType: 0
+  - dialogue: "Ok, ok. N\xE5 har du sett meg. S\xE5 n\xE5 er det p\xE5 tide \xE5
+      se... Deg!"
+    voiceline: {fileID: 8300000, guid: e4a8a96e54b4ee743a2d71613ee74cee, type: 3}
+    duration: 6.12
+    triggerEvent: 0
+    conditionType: 0
+  - dialogue: "... Ingenting? Du ser ingenting? Nei, alts\xE5, \xE5 f\xE5 speil til
+      \xE5 funke i spill er litt komplisert. Men bare se for deg hvor kult det hadde
+      v\xE6rt om det funket!"
+    voiceline: {fileID: 8300000, guid: 364ba031d4834764bbd439073c55d8c8, type: 3}
+    duration: 10.512
+    triggerEvent: 1
+    conditionType: 0
+  - dialogue: "S\xE5, velkommen til spillet mitt. Det har ikke en tittel enda, men
+      det kommer sikkert senere! "
+    voiceline: {fileID: 8300000, guid: 23f62d9c35ef40f4789500cad1ec2f43, type: 3}
+    duration: 4.896
+    triggerEvent: 0
+    conditionType: 0
+  - dialogue: "Det var faktisk det jeg h\xE5pet du kunne hjelpe meg med. Spillet
+      er liksom ikke... Ferdig, helt. Men vi kan lage det sammen! Er du med?"
+    voiceline: {fileID: 8300000, guid: 997224a335750a748b945bd640432c05, type: 3}
+    duration: 9.216
+    triggerEvent: 0
+    conditionType: 0
+  - dialogue: "(Nikk eller rist p\xE5 hodet)"
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    conditionType: 1
+  - dialogue: Da snakker vi!
+    voiceline: {fileID: 8300000, guid: e95c7a775df6e9e42937b81bfdffb318, type: 3}
+    duration: 3
+    triggerEvent: 0
+    conditionType: 0
+  - dialogue: "Kom igjeeeeeen. Ogs\xE5 har du ikke egentlig et valg, s\xE5. "
+    voiceline: {fileID: 8300000, guid: 2f9e1fda2625f78438dbc66044766fc3, type: 3}
+    duration: 3.264
+    triggerEvent: 0
+    conditionType: 0
+  - dialogue: "S\xE5, f\xF8rst og fremst s\xE5 m\xE5 du kunne bevege deg. S\xE5,
+      gj\xF8r meg en tjeneste? G\xE5 til denne r\xF8de firkanten her."
+    voiceline: {fileID: 8300000, guid: ceeff10de9d9b8946ab2e195579b2ab1, type: 3}
+    duration: 3
+    triggerEvent: 1
+    conditionType: 2

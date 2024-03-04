@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
         FARM,
         RACE,
         BLOCK,
-        SHOOTER
+        SHOOTER,
+        CAPSTONETUTORIAL
     }
     
     [Header("Room state")]

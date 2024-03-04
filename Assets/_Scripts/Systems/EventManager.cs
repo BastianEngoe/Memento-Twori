@@ -14,6 +14,7 @@ public class EventManager : MonoBehaviour
     public List<UnityEvent> raceEvents;
     public List<UnityEvent> blockEvents;
     public List<UnityEvent> shooterEvents;
+    public List<UnityEvent> capstoneTutorialEvents;
 
     private void Awake()
     {
@@ -47,6 +48,11 @@ public class EventManager : MonoBehaviour
         if (GameManager.instance.curRoom == GameManager.Rooms.SHOOTER)
         {
             shooterEvents[index].Invoke();
+        }
+
+        if (GameManager.instance.curRoom == GameManager.Rooms.CAPSTONETUTORIAL)
+        {
+            capstoneTutorialEvents[index].Invoke();
         }
     }
 }
