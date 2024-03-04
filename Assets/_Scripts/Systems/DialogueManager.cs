@@ -449,6 +449,30 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
+        if (dialogueBank.capstoneTutorialLines[lineIndex].conditionType == DialogueBankScriptableObject.conditions.EXTERNAL)
+        {
+            if (!checkingCondition)
+            {
+                checkingCondition = true;
+                performedCondition = false;
+            }
+
+            Debug.Log("We here");
+            if (performedCondition)
+            {
+                lineIndex++;
+                NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
+                performedCondition = false;
+                checkingCondition = false;
+                Debug.Log("Lets goooo");
+            }
+
+            if (checkingCondition)
+            {
+                elapsedTime = 0;
+            }
+        }
+
         if (elapsedTime >= dialogueBank.capstoneTutorialLines[lineIndex].duration)
         {
             lineIndex++;
@@ -456,11 +480,11 @@ public class DialogueManager : MonoBehaviour
             elapsedTime = 0f;
         }
 
-        if (Input.GetKeyUp(KeyCode.Mouse1))
-        {
-            lineIndex++;
-            NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
-        }
+        //if (Input.GetKeyUp(KeyCode.Mouse1))
+        //{
+        //    lineIndex++;
+        //    NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
+        //}
     }
 
     public void CheckExternalCondition()

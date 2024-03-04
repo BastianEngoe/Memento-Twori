@@ -8,9 +8,23 @@ public class ConditionSatisfied : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Object noticed player");
             if (this.gameObject.name == "roundCube")
             {
                 DialogueManager.instance.CheckExternalCondition();
+                Debug.Log("The cube noticed the player");
+            }
+
+            if (this.gameObject.CompareTag("PickUp"))
+            {
+                if (Input.GetKeyUp(KeyCode.E)) 
+                {
+                    DialogueManager.instance.CheckExternalCondition();
+                }
+                if (Input.GetKeyUp(KeyCode.Q))
+                {
+                    DialogueManager.instance.CheckExternalCondition();
+                }
             }
         }
 

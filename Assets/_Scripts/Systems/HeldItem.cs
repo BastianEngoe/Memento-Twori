@@ -38,7 +38,7 @@ public class HeldItem : MonoBehaviour
 
     public void PickupItem(GameObject item)
     {
-        if (GameManager.instance.curRoom == GameManager.Rooms.INTRO)
+        if (GameManager.instance.curRoom == GameManager.Rooms.INTRO || GameManager.instance.curRoom == GameManager.Rooms.CAPSTONETUTORIAL)
         {
             if(!canPickup)  return;
         

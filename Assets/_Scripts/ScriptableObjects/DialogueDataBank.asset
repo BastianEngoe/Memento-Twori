@@ -191,7 +191,7 @@ MonoBehaviour:
     conditionType: 1
   - dialogue: Da snakker vi!
     voiceline: {fileID: 8300000, guid: e95c7a775df6e9e42937b81bfdffb318, type: 3}
-    duration: 3
+    duration: 0.936
     triggerEvent: 0
     conditionType: 0
   - dialogue: "Kom igjeeeeeen. Ogs\xE5 har du ikke egentlig et valg, s\xE5. "
@@ -202,6 +202,39 @@ MonoBehaviour:
   - dialogue: "S\xE5, f\xF8rst og fremst s\xE5 m\xE5 du kunne bevege deg. S\xE5,
       gj\xF8r meg en tjeneste? G\xE5 til denne r\xF8de firkanten her."
     voiceline: {fileID: 8300000, guid: ceeff10de9d9b8946ab2e195579b2ab1, type: 3}
-    duration: 3
+    duration: 6.144
     triggerEvent: 1
     conditionType: 2
+  - dialogue: "Flotte greier! Hei, har du sett ett batteri f\xF8r?"
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 1
+    conditionType: 0
+  - dialogue: "G\xE5 \xE5 plukk opp det batteriet. Du bare st\xE5r foran det og trykker
+      p\xE5 E-knappen p\xE5 tastaturet."
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    conditionType: 2
+  - dialogue: "Nydelig. Om du vil slipppe det igjen, trykk p\xE5 Q."
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    conditionType: 2
+  - dialogue: Hei, det funker! Jeg er en ekte spillutvikler! Jeg lager et spill!
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    conditionType: 0
+  - dialogue: "S\xE5, du ser den d\xF8ren bak meg? Jeg f\xE5r ikke \xE5pnet den.
+      Kanskje du kan finne ut hvordan?"
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 1
+    conditionType: 0
+  - dialogue: "N\xE5r d\xE5 har f\xE5tt \xE5pnet den d\xF8ren s\xE5 er det bare \xE5
+      g\xE5 gjennom. Og da har du VUNNET."
+    voiceline: {fileID: 0}
+    duration: 3
+    triggerEvent: 0
+    conditionType: 0
