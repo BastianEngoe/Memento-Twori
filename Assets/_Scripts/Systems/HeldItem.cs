@@ -26,6 +26,11 @@ public class HeldItem : MonoBehaviour
     [SerializeField] private Material[] matArray;
     [SerializeField] private List<Material> matArray2;
 
+    [Header("Farming events")]
+    public string tag;
+    public UnityEvent onFarmItemUse;
+    public bool clearEventOnUse = false;
+    
     public GameObject inventoryItem;
 
     public UnityEvent onPickupItem;
@@ -330,6 +335,35 @@ public class HeldItem : MonoBehaviour
                     DropInventoryItem();
                 }
             }
+
+            if (inventoryItem && Input.GetMouseButtonUp(0))
+            {
+                if (Vector3.Distance(GetClosestTaggedObject(tag).position, transform.position) < 3f)
+                {
+                    onFarmItemUse.Invoke();
+                    if (clearEventOnUse)
+                    {
+                        onFarmItemUse = null;
+                    }
+                }
+            }
         }
+    }
+    Transform GetClosestTaggedObject(string tag)
+    {
+        Transform tMin = null;
+        float minDist = Mathf.Infinity;
+        Vector3 currentPos = transform.position;
+        GameObject[] TaggedObjects = GameObject.FindGameObjectsWithTag(tag);
+        foreach (GameObject g in TaggedObjects)
+        {
+            float dist = Vector3.Distance(g.transform.position, currentPos);
+            if (dist < minDist)
+            {
+                tMin = g.transform;
+                minDist = dist;
+            }
+        }
+        return tMin;
     }
 }
