@@ -6,6 +6,12 @@ TagManager:
   tags:
   - CinemachineTarget
   - PickUp
+  - Ground
+  - Sheep
+  - Chicken
+  - Pig
+  - Cow
+  - Plant
   layers:
   - Default
   - TransparentFX

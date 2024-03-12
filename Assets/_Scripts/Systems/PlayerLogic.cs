@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class PlayerLogic : MonoBehaviour
@@ -121,7 +122,8 @@ public class PlayerLogic : MonoBehaviour
             hItemSource.Play();
         }
     }
-
+    
+    
     private void UpdateRaceLogic()
     {
         
