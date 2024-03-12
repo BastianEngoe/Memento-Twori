@@ -489,6 +489,7 @@ MonoBehaviour:
   raceEvents: []
   blockEvents: []
   shooterEvents: []
+  capstoneTutorialEvents: []
 --- !u!114 &22831399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25322,6 +25323,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1788096336207066404, guid: 4b8557173902c624b8be9264d8aa1809,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 08aa3eb3403cfc447bbafbe8f653ae86, type: 2}
     - target: {fileID: 3952138939442617004, guid: 4b8557173902c624b8be9264d8aa1809,
         type: 3}
       propertyPath: m_Name
@@ -25329,8 +25335,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6325939127471611263, guid: 4b8557173902c624b8be9264d8aa1809,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1644095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325939127471611263, guid: 4b8557173902c624b8be9264d8aa1809,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.12
+      value: 7.8969
       objectReference: {fileID: 0}
     - target: {fileID: 6325939127471611263, guid: 4b8557173902c624b8be9264d8aa1809,
         type: 3}

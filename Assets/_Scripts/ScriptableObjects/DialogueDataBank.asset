@@ -176,7 +176,7 @@ MonoBehaviour:
       det kommer sikkert senere! "
     voiceline: {fileID: 8300000, guid: 23f62d9c35ef40f4789500cad1ec2f43, type: 3}
     duration: 4.896
-    triggerEvent: 0
+    triggerEvent: 1
     conditionType: 0
   - dialogue: "Det var faktisk det jeg h\xE5pet du kunne hjelpe meg med. Spillet
       er liksom ikke... Ferdig, helt. Men vi kan lage det sammen! Er du med?"
@@ -200,41 +200,42 @@ MonoBehaviour:
     triggerEvent: 0
     conditionType: 0
   - dialogue: "S\xE5, f\xF8rst og fremst s\xE5 m\xE5 du kunne bevege deg. S\xE5,
-      gj\xF8r meg en tjeneste? G\xE5 til denne r\xF8de firkanten her."
+      gj\xF8r meg en tjeneste? Bruk W, A, S og D knappen p\xE5 tastaturet til \xE5
+      g\xE5 til denne r\xF8de firkanten her."
     voiceline: {fileID: 8300000, guid: ceeff10de9d9b8946ab2e195579b2ab1, type: 3}
     duration: 6.144
     triggerEvent: 1
     conditionType: 2
   - dialogue: "Flotte greier! Hei, har du sett ett batteri f\xF8r?"
-    voiceline: {fileID: 0}
-    duration: 3
+    voiceline: {fileID: 8300000, guid: 697985f18e8c198439cadc167d40bfc0, type: 3}
+    duration: 3.072
     triggerEvent: 1
     conditionType: 0
   - dialogue: "G\xE5 \xE5 plukk opp det batteriet. Du bare st\xE5r foran det og trykker
       p\xE5 E-knappen p\xE5 tastaturet."
-    voiceline: {fileID: 0}
-    duration: 3
+    voiceline: {fileID: 8300000, guid: b2fc9a93750501d40b33d79b5832862e, type: 3}
+    duration: 5.064
     triggerEvent: 0
     conditionType: 2
   - dialogue: "Nydelig. Om du vil slipppe det igjen, trykk p\xE5 Q."
-    voiceline: {fileID: 0}
-    duration: 3
+    voiceline: {fileID: 8300000, guid: 0cfe950cf990dc946b93f7e37b389409, type: 3}
+    duration: 3.216
     triggerEvent: 0
     conditionType: 2
   - dialogue: Hei, det funker! Jeg er en ekte spillutvikler! Jeg lager et spill!
-    voiceline: {fileID: 0}
-    duration: 3
+    voiceline: {fileID: 8300000, guid: 2d41d7d1b07bfec42ba3ad220720f172, type: 3}
+    duration: 4.44
     triggerEvent: 0
     conditionType: 0
   - dialogue: "S\xE5, du ser den d\xF8ren bak meg? Jeg f\xE5r ikke \xE5pnet den.
       Kanskje du kan finne ut hvordan?"
-    voiceline: {fileID: 0}
-    duration: 3
+    voiceline: {fileID: 8300000, guid: c05500e9cf289db42b0406a65e9e7cb5, type: 3}
+    duration: 4.968
     triggerEvent: 1
     conditionType: 0
   - dialogue: "N\xE5r d\xE5 har f\xE5tt \xE5pnet den d\xF8ren s\xE5 er det bare \xE5
       g\xE5 gjennom. Og da har du VUNNET."
-    voiceline: {fileID: 0}
-    duration: 3
-    triggerEvent: 0
+    voiceline: {fileID: 8300000, guid: 5cde2a45e5dceeb4cbcc68fd4831a3a6, type: 3}
+    duration: 4.272
+    triggerEvent: 1
     conditionType: 0

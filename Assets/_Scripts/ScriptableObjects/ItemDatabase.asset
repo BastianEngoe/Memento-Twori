@@ -15,11 +15,11 @@ MonoBehaviour:
   ItemDatabase:
   - name: Seeds
     icon: {fileID: 21300000, guid: d829baff27032a24da5ffa7b07143b43, type: 3}
-    soundEffect: {fileID: 0}
+    soundEffect: {fileID: 8300000, guid: 105e0410448be99438fb67d6a4bf11e3, type: 3}
     model: {fileID: 8689696221235126439, guid: c1d5054e2267f1649b69273937412c2b, type: 3}
   - name: Hoe
     icon: {fileID: 21300000, guid: d8158a412e1962e44bceba512a8533cc, type: 3}
-    soundEffect: {fileID: 0}
+    soundEffect: {fileID: 8300000, guid: a6aab05f1c6f1cb41bed6353e10244ef, type: 3}
     model: {fileID: 6483399843328791862, guid: 5398143fa181fcb4093dcaef0ac49a85, type: 3}
   - name: Watering Can
     icon: {fileID: 21300000, guid: 51420dbe8c4ddb84cae8482db4ac0fae, type: 3}
@@ -27,7 +27,7 @@ MonoBehaviour:
     model: {fileID: 9074590585776664770, guid: c7fad83dde403d145b11920aedcd644a, type: 3}
   - name: Fishing Pole
     icon: {fileID: 21300000, guid: 83e4bca420bca624298caa4c5b782578, type: 3}
-    soundEffect: {fileID: 0}
+    soundEffect: {fileID: 8300000, guid: a657cc9966b2fd14aa646c0936cf00ea, type: 3}
     model: {fileID: 1387888133380322297, guid: 17847c0ffd4eb8649b062326e145caff, type: 3}
   - name: Emily
     icon: {fileID: 21300000, guid: f09164c70b7ef994884700897d8c70c6, type: 3}

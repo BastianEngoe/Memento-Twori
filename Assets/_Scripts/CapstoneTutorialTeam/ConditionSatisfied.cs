@@ -4,29 +4,69 @@ using UnityEngine;
 
 public class ConditionSatisfied : MonoBehaviour
 {
+    public bool hasTouchedCube, canPickUp, hasPickedUp, canPutDown, hasPutDown, batteryNearHole;
+    public GameObject currentHeldItem;
+    public Animator batteryHoleAnimator;
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.E) && canPickUp)
+        {
+            Debug.Log("External condition should be checked");
+            DialogueManager.instance.CheckExternalCondition();
+            hasPickedUp = true;
+            canPickUp = false;
+            canPutDown = true;
+        }
+        if (Input.GetKeyUp(KeyCode.Q) && hasPutDown == false && canPutDown)
+        {
+            DialogueManager.instance.CheckExternalCondition();
+            hasPutDown = true;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Object noticed player");
-            if (this.gameObject.name == "roundCube")
+            if (this.gameObject.name == "roundCube" && hasTouchedCube == false)
             {
+                hasTouchedCube = true;
                 DialogueManager.instance.CheckExternalCondition();
                 Debug.Log("The cube noticed the player");
             }
-
-            if (this.gameObject.CompareTag("PickUp"))
-            {
-                if (Input.GetKeyUp(KeyCode.E)) 
-                {
-                    DialogueManager.instance.CheckExternalCondition();
-                }
-                if (Input.GetKeyUp(KeyCode.Q))
-                {
-                    DialogueManager.instance.CheckExternalCondition();
-                }
-            }
         }
 
+    }
+
+    public void DoExternalCondition()
+    {
+        DialogueManager.instance.CheckExternalCondition();
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (this.gameObject.CompareTag("PickUp"))
+            {
+                canPickUp = true;
+            }
+        } 
+        if (this.gameObject.name == "BatteryHole")
+        {
+            Debug.Log("Hole knows its a battery hole");
+            currentHeldItem = GameObject.Find("HeldItem").GetComponent<HeldItem>().heldItem;
+            batteryNearHole = true;
+            if (Input.GetKeyUp(KeyCode.Q) && batteryNearHole)
+            {
+                Debug.Log("Should play animation");
+                if (batteryHoleAnimator != null)
+                {
+                    Debug.Log("Is playing animation");
+                    batteryHoleAnimator.Play("Insertbattery");
+                }
+
+            }
+        }
     }
 }
