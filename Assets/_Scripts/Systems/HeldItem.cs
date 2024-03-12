@@ -296,7 +296,7 @@ public class HeldItem : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance.curRoom == GameManager.Rooms.INTRO)
+        if (GameManager.instance.curRoom == GameManager.Rooms.INTRO || GameManager.instance.curRoom == GameManager.Rooms.CAPSTONETUTORIAL)
         {
             //Pick up the potential pick up target.
             if (Input.GetKeyUp(KeyCode.E))

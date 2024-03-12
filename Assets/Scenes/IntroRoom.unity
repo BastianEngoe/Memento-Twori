@@ -662,6 +662,7 @@ MonoBehaviour:
   raceEvents: []
   blockEvents: []
   shooterEvents: []
+  capstoneTutorialEvents: []
 --- !u!1 &108353787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 607737497525581432, guid: a66a6ea52b95125409417f82b368c2ec,
