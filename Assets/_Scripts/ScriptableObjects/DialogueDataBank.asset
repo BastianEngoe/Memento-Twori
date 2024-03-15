@@ -39,6 +39,11 @@ MonoBehaviour:
     voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
     duration: 3.030204
     triggerEvent: 1
+    conditionType: 0
+  - dialogue: (Nod or shake your head)
+    voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
+    duration: 3.030204
+    triggerEvent: 0
     conditionType: 1
   - dialogue: "Yeah, that\u2019s the spirit! I mean, you better, because you\u2019re
       in one."
@@ -56,21 +61,21 @@ MonoBehaviour:
       You!"
     voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
     duration: 3.030204
-    triggerEvent: 1
+    triggerEvent: 0
     conditionType: 0
   - dialogue: "Oh. Uhm. Uh, yeah, so, when I looked at my budget it turned out rendering
       reflections was a bit too expensive. But\u2026 Hey, you know you\u2019re beautiful
       anyway, right? Yeah, come on, let\u2019s see that smile."
     voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
     duration: 3.030204
-    triggerEvent: 0
+    triggerEvent: 1
     conditionType: 0
   - dialogue: "So, welcome! This is my game, I don\u2019t have a name for it. I don\u2019t
       even know what genre I want it to be, honestly, I\u2019m just so excited to
       make my first game."
     voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
     duration: 3.030204
-    triggerEvent: 0
+    triggerEvent: 1
     conditionType: 0
   - dialogue: "So I figured, hey! Why don\u2019t I get someone to help me choose,
       you know? And that\u2019s where you come in."
@@ -83,7 +88,7 @@ MonoBehaviour:
     voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
     duration: 3.030204
     triggerEvent: 1
-    conditionType: 0
+    conditionType: 2
   - dialogue: Nice, nice. Engaging. Do you want to pick up this box?
     voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
     duration: 3.030204
@@ -106,11 +111,15 @@ MonoBehaviour:
     duration: 3.030204
     triggerEvent: 0
     conditionType: 0
-  - dialogue: "We\u2019ll show the haters what I can do! And what you can do! Just
-      step through here when you\u2019re ready, and we will\u2026 BLAST OFF"
+  - dialogue: Just head on through that door when you're ready!
     voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
     duration: 3.030204
     triggerEvent: 1
+    conditionType: 0
+  - dialogue: Step on right through this door when you're ready!
+    voiceline: {fileID: 8300000, guid: 723957092b33b374bbadeafb5af1815f, type: 3}
+    duration: 3.030204
+    triggerEvent: 0
     conditionType: 0
   farmLines:
   - dialogue: 
