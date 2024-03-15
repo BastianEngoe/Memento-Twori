@@ -87,7 +87,7 @@ public class ScreenEffects : MonoBehaviour
     private void SetScreenFX() // Method to save the ScreenEffects value to PlayerPrefs
     {
         PlayerPrefs.SetInt("ScreenEffects", screenEffectsEnabled ? 1 : 0);
-
+        if (!postProcessVolumeProfile) return;
         if (postProcessVolume.profile.TryGet(out ScreenSpaceLensFlare screenSpaceLensFlare))
         {
             screenSpaceLensFlare.intensity.value = screenEffectsEnabled ? 0.3f : 0;
