@@ -23,7 +23,7 @@ public class SliderPercentage : MonoBehaviour
             float percentage = 0;
             if (sliderComponent.maxValue != 0)
             {
-                percentage = (sliderComponent.value / sliderComponent.maxValue) * 100;
+                percentage = (sliderComponent.value / sliderComponent.maxValue) * 150;
             }
             textComponent.text = $"{percentage:F0}%";
             yield return new WaitForSecondsRealtime(0.1f);

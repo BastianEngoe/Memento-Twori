@@ -1,3 +1,4 @@
+using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using UnityEngine;
@@ -8,11 +9,11 @@ public class BootscreenDialogue : MonoBehaviour
 {
     [SerializeField] private TMP_Text dialogue;
     public BasicDialogueBankScriptableObject dialogueBank;
-    public int lineIndex;
-    [SerializeField] private GameObject brightnessCanvas, screenEffectsCanvas, highContrastCanvas, FOVcanvas;
-    private CanvasGroup brightnessCanvasGroup, screenEffectsCanvasGroup, highContrastCanvasGroup, FOVcanvasGroup;
+    [HideInInspector] public int lineIndex;
+    [SerializeField] private GameObject brightnessCanvas, screenEffectsCanvas, highContrastCanvas, FOVCanvas;
+    private CanvasGroup brightnessCanvasGroup, screenEffectsCanvasGroup, highContrastCanvasGroup, FOVCanvasGroup;
 
-    public delegate void LineAdvancedHandler();
+    public delegate void LineAdvancedHandler(int lineIndex);
     public event LineAdvancedHandler OnLineHasAdvanced;
     
     
@@ -21,12 +22,20 @@ public class BootscreenDialogue : MonoBehaviour
         brightnessCanvasGroup = brightnessCanvas.GetComponent<CanvasGroup>();
         screenEffectsCanvasGroup = screenEffectsCanvas.GetComponent<CanvasGroup>();
         highContrastCanvasGroup = highContrastCanvas.GetComponent<CanvasGroup>();
-        FOVcanvasGroup = FOVcanvas.GetComponent<CanvasGroup>();
+        FOVCanvasGroup = FOVCanvas.GetComponent<CanvasGroup>();
     }
-    
+
+    private void Start()
+    {
+        SetCanvasGroupState(screenEffectsCanvasGroup, false);
+        SetCanvasGroupState(brightnessCanvasGroup, false);
+        SetCanvasGroupState(highContrastCanvasGroup, false);
+        SetCanvasGroupState(FOVCanvasGroup, false);
+    }
+
     void NextLine(BasicDialogueBankScriptableObject.DialogueLine lineType)
     {
-        OnLineHasAdvanced?.Invoke(); // Invoke the event to notify subscribers that the dialogue line has advanced. Decouples the dialogue manager from the ClickToContinue script for modularity.
+        OnLineHasAdvanced?.Invoke(lineIndex); // Invoke the event to notify subscribers that the dialogue line has advanced. Decouples the dialogue manager from the ClickToContinue script for modularity.
          
         dialogue.text = lineType.dialogue;
         
@@ -69,7 +78,7 @@ public class BootscreenDialogue : MonoBehaviour
         SetCanvasGroupState(brightnessCanvasGroup, true);
         SetCanvasGroupState(screenEffectsCanvasGroup, false);
         SetCanvasGroupState(highContrastCanvasGroup, false);
-        SetCanvasGroupState(FOVcanvasGroup, false);
+        SetCanvasGroupState(FOVCanvasGroup, false);
     }
 
     public void ShowScreenEffectsOption()
@@ -77,7 +86,7 @@ public class BootscreenDialogue : MonoBehaviour
         SetCanvasGroupState(screenEffectsCanvasGroup, true);
         SetCanvasGroupState(brightnessCanvasGroup, false);
         SetCanvasGroupState(highContrastCanvasGroup, false);
-        SetCanvasGroupState(FOVcanvasGroup, false);
+        SetCanvasGroupState(FOVCanvasGroup, false);
     }
 
     public void ShowHighContrastOption()
@@ -85,7 +94,7 @@ public class BootscreenDialogue : MonoBehaviour
         SetCanvasGroupState(screenEffectsCanvasGroup, false);
         SetCanvasGroupState(brightnessCanvasGroup, false);
         SetCanvasGroupState(highContrastCanvasGroup, true);
-        SetCanvasGroupState(FOVcanvasGroup, false);
+        SetCanvasGroupState(FOVCanvasGroup, false);
     }
 
     public void ShowFOVCanvas()
@@ -93,7 +102,7 @@ public class BootscreenDialogue : MonoBehaviour
         SetCanvasGroupState(screenEffectsCanvasGroup, false);
         SetCanvasGroupState(brightnessCanvasGroup, false);
         SetCanvasGroupState(highContrastCanvasGroup, false);
-        SetCanvasGroupState(FOVcanvasGroup, true);
+        SetCanvasGroupState(FOVCanvasGroup, true);
     }
 
     private void SetCanvasGroupState(CanvasGroup canvasGroup, bool state)

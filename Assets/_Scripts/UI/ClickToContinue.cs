@@ -63,7 +63,7 @@ public class ClickToContinue : MonoBehaviour
         
     }
     
-    private void DialogueLineHasHasAdvanced()
+    private void DialogueLineHasHasAdvanced(int lineIndex)
     {
         if (dialogueManager.GetComponent<BootscreenDialogue>().dialogueBank.bootLines[dialogueManager.GetComponent<BootscreenDialogue>().lineIndex].canClickToAdvance)
         {
