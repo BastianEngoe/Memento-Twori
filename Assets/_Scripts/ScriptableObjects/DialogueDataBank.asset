@@ -135,7 +135,7 @@ MonoBehaviour:
       mener jeg \"meg.\" To sekund..."
     voiceline: {fileID: 8300000, guid: 8c2da349a42c9e640b6506a22a787714, type: 3}
     duration: 7.08
-    triggerEvent: 0
+    triggerEvent: 1
     conditionType: 0
   - dialogue: Der har vi litt lys! Vent, det ser kjedelig ut. To flere sekund.
     voiceline: {fileID: 8300000, guid: c6704d164b7224648a414ec9ab844f2c, type: 3}
@@ -161,7 +161,7 @@ MonoBehaviour:
   - dialogue: Kjempebra! Du burde like spill, du er inni ett.
     voiceline: {fileID: 8300000, guid: b54cba3a39295ba4e8a10c6de91cffdb, type: 3}
     duration: 3.216
-    triggerEvent: 0
+    triggerEvent: 1
     conditionType: 0
   - dialogue: "H\xE6? Hei, kom igjen. Kom igjeeeen. Vi skal ha det fint."
     voiceline: {fileID: 8300000, guid: eafce00e52530054e8ca87d988025b56, type: 3}
@@ -201,7 +201,7 @@ MonoBehaviour:
   - dialogue: Da snakker vi!
     voiceline: {fileID: 8300000, guid: e95c7a775df6e9e42937b81bfdffb318, type: 3}
     duration: 0.936
-    triggerEvent: 0
+    triggerEvent: 1
     conditionType: 0
   - dialogue: "Kom igjeeeeeen. Ogs\xE5 har du ikke egentlig et valg, s\xE5. "
     voiceline: {fileID: 8300000, guid: 2f9e1fda2625f78438dbc66044766fc3, type: 3}
@@ -212,7 +212,7 @@ MonoBehaviour:
       gj\xF8r meg en tjeneste? Bruk W, A, S og D knappen p\xE5 tastaturet til \xE5
       g\xE5 til denne r\xF8de firkanten her."
     voiceline: {fileID: 8300000, guid: ceeff10de9d9b8946ab2e195579b2ab1, type: 3}
-    duration: 6.144
+    duration: 9.648
     triggerEvent: 1
     conditionType: 2
   - dialogue: "Flotte greier! Hei, har du sett ett batteri f\xF8r?"

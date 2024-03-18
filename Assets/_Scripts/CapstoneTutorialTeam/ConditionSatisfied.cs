@@ -5,8 +5,8 @@ using UnityEngine;
 public class ConditionSatisfied : MonoBehaviour
 {
     public bool hasTouchedCube, canPickUp, hasPickedUp, canPutDown, hasPutDown, batteryNearHole;
-    public GameObject currentHeldItem;
-    public Animator batteryHoleAnimator;
+    public GameObject currentHeldItem, battery;
+    public Animator batteryHoleAnimator, doorAnimator;
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.E) && canPickUp)
@@ -21,6 +21,18 @@ public class ConditionSatisfied : MonoBehaviour
         {
             DialogueManager.instance.CheckExternalCondition();
             hasPutDown = true;
+        }
+        if (Input.GetKeyUp(KeyCode.Q) && batteryNearHole)
+        {
+            Debug.Log("Should play animation");
+            if (batteryHoleAnimator != null)
+            {
+                Debug.Log("Is playing animation");
+                batteryHoleAnimator.Play("Insertbattery");
+                Destroy(battery);
+                doorAnimator.Play("DoorOpen");
+            }
+
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -57,16 +69,15 @@ public class ConditionSatisfied : MonoBehaviour
             Debug.Log("Hole knows its a battery hole");
             currentHeldItem = GameObject.Find("HeldItem").GetComponent<HeldItem>().heldItem;
             batteryNearHole = true;
-            if (Input.GetKeyUp(KeyCode.Q) && batteryNearHole)
-            {
-                Debug.Log("Should play animation");
-                if (batteryHoleAnimator != null)
-                {
-                    Debug.Log("Is playing animation");
-                    batteryHoleAnimator.Play("Insertbattery");
-                }
+            
+        }
+    }
 
-            }
+    private void OnTriggerExit(Collider other)
+    {
+        if (this.gameObject.name == "BatteryHole")
+        {
+            batteryNearHole = false;
         }
     }
 }
