@@ -15,7 +15,7 @@ public class BootscreenDialogue : MonoBehaviour
     [SerializeField] private bool skipBootscreen;
 
     public delegate void LineAdvancedHandler(int lineIndex);
-    public event LineAdvancedHandler dHasAdvanced;
+    public event LineAdvancedHandler OnLineHasAdvanced;
     
     
     private void Awake() // Assign the canvas groups to their respective canvas game objects for optimization
