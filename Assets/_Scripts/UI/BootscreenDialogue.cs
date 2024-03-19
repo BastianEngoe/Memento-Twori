@@ -12,9 +12,10 @@ public class BootscreenDialogue : MonoBehaviour
     [HideInInspector] public int lineIndex;
     [SerializeField] private GameObject brightnessCanvas, screenEffectsCanvas, highContrastCanvas, FOVCanvas;
     private CanvasGroup brightnessCanvasGroup, screenEffectsCanvasGroup, highContrastCanvasGroup, FOVCanvasGroup;
+    [SerializeField] bool skipBootscreen;
 
     public delegate void LineAdvancedHandler(int lineIndex);
-    public event LineAdvancedHandler OnLineHasAdvanced;
+    public event LineAdvancedHandler dHasAdvanced;
     
     
     private void Awake() // Assign the canvas groups to their respective canvas game objects for optimization
@@ -35,6 +36,11 @@ public class BootscreenDialogue : MonoBehaviour
 
     void NextLine(BasicDialogueBankScriptableObject.DialogueLine lineType)
     {
+        if (skipBootscreen)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        
         OnLineHasAdvanced?.Invoke(lineIndex); // Invoke the event to notify subscribers that the dialogue line has advanced. Decouples the dialogue manager from the ClickToContinue script for modularity.
          
         dialogue.text = lineType.dialogue;
