@@ -12,7 +12,7 @@ public class BootscreenDialogue : MonoBehaviour
     [HideInInspector] public int lineIndex;
     [SerializeField] private GameObject brightnessCanvas, screenEffectsCanvas, highContrastCanvas, FOVCanvas;
     private CanvasGroup brightnessCanvasGroup, screenEffectsCanvasGroup, highContrastCanvasGroup, FOVCanvasGroup;
-    [SerializeField] bool skipBootscreen;
+    [SerializeField] private bool skipBootscreen;
 
     public delegate void LineAdvancedHandler(int lineIndex);
     public event LineAdvancedHandler dHasAdvanced;
