@@ -38,6 +38,7 @@ public class BootscreenDialogue : MonoBehaviour
     {
         if (skipBootscreen)
         {
+            dialogue.color = new Color(dialogue.color.r, dialogue.color.g, dialogue.color.b, 0);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         
