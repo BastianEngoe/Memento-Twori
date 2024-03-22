@@ -92,7 +92,10 @@ public class HeadShakeNoSensor : MonoBehaviour
 
 	void Update ()
 	{
-		UpdateShakeNo();
+		if (GameManager.instance.checkInput)
+		{
+			UpdateShakeNo();
+		}
 	}
 
 	void ResetShake()

@@ -92,7 +92,10 @@ public class HeadNodYesSensor : MonoBehaviour
 
 	void Update ()
 	{
-		UpdateNodYes();
+		if (GameManager.instance.checkInput)
+		{
+			UpdateNodYes();
+		}
 	}
 
 	void ResetNod()

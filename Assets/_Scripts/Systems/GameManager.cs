@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     private FirstPersonController playerFPSController;
 
     private bool canPause, isPaused;
-    [HideInInspector] public bool isNodding, isShaking;
+    public bool isNodding, isShaking, checkInput;
 
 	[Header("Dialogue audio source")]
     public AudioSource mascotSpeaker;
@@ -61,6 +61,12 @@ public class GameManager : MonoBehaviour
                 playerFPSController.RotationSpeed = 1f;
             }
         }
+
+        if (!checkInput)
+        {
+            isNodding = false;
+            isShaking = false;
+        }
     }
 
     public void ToggleMovement(bool canMove)
@@ -97,6 +103,8 @@ public class GameManager : MonoBehaviour
         //0 - No input
         //1 - Yes
         //2 - No
+
+        checkInput = true;
 
         if (isNodding)
         {

@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private bool performedCondition;
     [SerializeField] private bool nodded;
 
+    [SerializeField] private int nodCondition;
+
     private void Awake()
     {
         instance = this;
@@ -117,96 +119,8 @@ public class DialogueManager : MonoBehaviour
             eventIndex++;
         }
     }
-    
-    private IEnumerator CheckForCondition(DialogueBankScriptableObject.DialogueLine conditionLine)
-    {
-        Debug.Log("Checking for condition...");
-        
-        int condition;
-        GameManager.instance.RetrievePlayerInput(out condition);
-        if (condition == 1)
-        {
-            Debug.Log("Condition Nodding");
 
-            performedCondition = true;
-            checkingCondition = false;
-            nodded = true;
-
-            lineIndex++;
-
-            if (GameManager.instance.curRoom == GameManager.Rooms.INTRO)
-            {
-                NextLine(dialogueBank.introLines[lineIndex]);
-            }
-            if (GameManager.instance.curRoom == GameManager.Rooms.FARM)
-            {
-                NextLine(dialogueBank.farmLines[lineIndex]);
-            }
-            if (GameManager.instance.curRoom == GameManager.Rooms.RACE)
-            {
-                NextLine(dialogueBank.raceLines[lineIndex]);
-            }
-            if (GameManager.instance.curRoom == GameManager.Rooms.BLOCK)
-            {
-                NextLine(dialogueBank.blockLines[lineIndex]);
-            }
-            if (GameManager.instance.curRoom == GameManager.Rooms.SHOOTER)
-            {
-                NextLine(dialogueBank.shooterLines[lineIndex]);
-            }
-            if (GameManager.instance.curRoom == GameManager.Rooms.CAPSTONETUTORIAL)
-            {
-                NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
-            }
-
-
-            StopCoroutine(CheckForCondition(conditionLine));
-        }
-
-        if (condition == 2)
-        {
-            Debug.Log("Condition Shaking");
-
-            lineIndex += 2;
-            performedCondition = true;
-            checkingCondition = false;
-            
-            if (GameManager.instance.curRoom == GameManager.Rooms.INTRO)
-            {
-                NextLine(dialogueBank.introLines[lineIndex]);
-            }
-            if (GameManager.instance.curRoom == GameManager.Rooms.FARM)
-            {
-                NextLine(dialogueBank.farmLines[lineIndex]);
-            }
-            if (GameManager.instance.curRoom == GameManager.Rooms.RACE)
-            {
-                NextLine(dialogueBank.raceLines[lineIndex]);
-            }
-            if (GameManager.instance.curRoom == GameManager.Rooms.BLOCK)
-            {
-                NextLine(dialogueBank.blockLines[lineIndex]);
-            }
-            if (GameManager.instance.curRoom == GameManager.Rooms.SHOOTER)
-            {
-                NextLine(dialogueBank.shooterLines[lineIndex]);
-            }
-            if (GameManager.instance.curRoom == GameManager.Rooms.CAPSTONETUTORIAL)
-            {
-                NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
-            }
-
-            StopCoroutine(CheckForCondition(conditionLine));
-        }
-
-        yield return new WaitForSeconds(0.25f);
-        if (performedCondition == false)
-        {
-            StartCoroutine(CheckForCondition(conditionLine));
-        }
-    }
-    
-     private void UpdateIntroRoom()
+    private void UpdateIntroRoom()
     {
         if (lineIndex == dialogueBank.introLines.Count - 1)
         {
@@ -222,12 +136,37 @@ public class DialogueManager : MonoBehaviour
         {
             if (!checkingCondition)
             {
-                StartCoroutine(CheckForCondition(dialogueBank.introLines[lineIndex]));
                 performedCondition = false;
                 checkingCondition = true;
             }
+            else
+            {
+                GameManager.instance.RetrievePlayerInput(out nodCondition);
+                if (nodCondition != 0)
+                {
+                    performedCondition = true;
+                    GameManager.instance.checkInput = false;
+                }
+            }
 
-            if(checkingCondition)
+            if (performedCondition)
+            {
+                if (nodCondition == 1)
+                {
+                    lineIndex++;
+                    nodded = true;
+                }
+                if (nodCondition == 2)
+                {
+                    lineIndex += 2;
+                }
+                performedCondition = false;
+                checkingCondition = false;
+                nodCondition = 0;
+                
+                NextLine(dialogueBank.introLines[lineIndex]);
+            }
+            if (checkingCondition)
             {
                 elapsedTime = 0;
             }
@@ -281,12 +220,37 @@ public class DialogueManager : MonoBehaviour
         {
             if (!checkingCondition)
             {
-                StartCoroutine(CheckForCondition(dialogueBank.farmLines[lineIndex]));
                 performedCondition = false;
                 checkingCondition = true;
             }
+            else
+            {
+                GameManager.instance.RetrievePlayerInput(out nodCondition);
+                if (nodCondition != 0)
+                {
+                    performedCondition = true;
+                    GameManager.instance.checkInput = false;
+                }
+            }
 
-            if(checkingCondition)
+            if (performedCondition)
+            {
+                if (nodCondition == 1)
+                {
+                    lineIndex++;
+                    nodded = true;
+                }
+                if (nodCondition == 2)
+                {
+                    lineIndex += 2;
+                }
+                performedCondition = false;
+                checkingCondition = false;
+                nodCondition = 0;
+                
+                NextLine(dialogueBank.farmLines[lineIndex]);
+            }
+            if (checkingCondition)
             {
                 elapsedTime = 0;
             }
@@ -333,14 +297,35 @@ public class DialogueManager : MonoBehaviour
         {
             if (!checkingCondition)
             {
-                StartCoroutine(CheckForCondition(dialogueBank.raceLines[lineIndex]));
                 performedCondition = false;
                 checkingCondition = true;
             }
-
-            if(checkingCondition)
+            else
             {
-                elapsedTime = 0;
+                GameManager.instance.RetrievePlayerInput(out nodCondition);
+                if (nodCondition != 0)
+                {
+                    performedCondition = true;
+                    GameManager.instance.checkInput = false;
+                }
+            }
+
+            if (performedCondition)
+            {
+                if (nodCondition == 1)
+                {
+                    lineIndex++;
+                    nodded = true;
+                }
+                if (nodCondition == 2)
+                {
+                    lineIndex += 2;
+                }
+                performedCondition = false;
+                checkingCondition = false;
+                nodCondition = 0;
+                
+                NextLine(dialogueBank.raceLines[lineIndex]);
             }
         }
 
@@ -349,6 +334,11 @@ public class DialogueManager : MonoBehaviour
             lineIndex++;
             NextLine(dialogueBank.raceLines[lineIndex]);
             elapsedTime = 0f;
+        }
+        
+        if (checkingCondition)
+        {
+            elapsedTime = 0;
         }
     }
     
@@ -368,12 +358,38 @@ public class DialogueManager : MonoBehaviour
         {
             if (!checkingCondition)
             {
-                StartCoroutine(CheckForCondition(dialogueBank.blockLines[lineIndex]));
                 performedCondition = false;
                 checkingCondition = true;
             }
+            else
+            {
+                GameManager.instance.RetrievePlayerInput(out nodCondition);
+                if (nodCondition != 0)
+                {
+                    performedCondition = true;
+                    GameManager.instance.checkInput = false;
+                }
+            }
 
-            if(checkingCondition)
+            if (performedCondition)
+            {
+                if (nodCondition == 1)
+                {
+                    lineIndex++;
+                    nodded = true;
+                }
+                if (nodCondition == 2)
+                {
+                    lineIndex += 2;
+                }
+                performedCondition = false;
+                checkingCondition = false;
+                nodCondition = 0;
+                
+                NextLine(dialogueBank.shooterLines[lineIndex]);
+            }
+            
+            if (checkingCondition)
             {
                 elapsedTime = 0;
             }
@@ -403,12 +419,38 @@ public class DialogueManager : MonoBehaviour
         {
             if (!checkingCondition)
             {
-                StartCoroutine(CheckForCondition(dialogueBank.shooterLines[lineIndex]));
                 performedCondition = false;
                 checkingCondition = true;
             }
+            else
+            {
+                GameManager.instance.RetrievePlayerInput(out nodCondition);
+                if (nodCondition != 0)
+                {
+                    performedCondition = true;
+                    GameManager.instance.checkInput = false;
+                }
+            }
 
-            if(checkingCondition)
+            if (performedCondition)
+            {
+                if (nodCondition == 1)
+                {
+                    lineIndex++;
+                    nodded = true;
+                }
+                if (nodCondition == 2)
+                {
+                    lineIndex += 2;
+                }
+                performedCondition = false;
+                checkingCondition = false;
+                nodCondition = 0;
+                
+                NextLine(dialogueBank.shooterLines[lineIndex]);
+            }
+            
+            if (checkingCondition)
             {
                 elapsedTime = 0;
             }
@@ -438,9 +480,35 @@ public class DialogueManager : MonoBehaviour
         {
             if (!checkingCondition)
             {
-                StartCoroutine(CheckForCondition(dialogueBank.capstoneTutorialLines[lineIndex]));
                 performedCondition = false;
                 checkingCondition = true;
+            }
+            else
+            {
+                GameManager.instance.RetrievePlayerInput(out nodCondition);
+                if (nodCondition != 0)
+                {
+                    performedCondition = true;
+                    GameManager.instance.checkInput = false;
+                }
+            }
+
+            if (performedCondition)
+            {
+                if (nodCondition == 1)
+                {
+                    lineIndex++;
+                    nodded = true;
+                }
+                if (nodCondition == 2)
+                {
+                    lineIndex += 2;
+                }
+                performedCondition = false;
+                checkingCondition = false;
+                nodCondition = 0;
+                
+                NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
             }
 
             if (checkingCondition)
@@ -461,9 +529,9 @@ public class DialogueManager : MonoBehaviour
             if (performedCondition)
             {
                 lineIndex++;
-                NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
                 performedCondition = false;
                 checkingCondition = false;
+                NextLine(dialogueBank.capstoneTutorialLines[lineIndex]);
                 Debug.Log("Lets goooo");
             }
 
