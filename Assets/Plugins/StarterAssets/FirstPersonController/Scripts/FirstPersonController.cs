@@ -59,6 +59,7 @@ namespace StarterAssets
 		private float _rotationVelocity;
 		private float _verticalVelocity;
 		private float _terminalVelocity = 53.0f;
+		private float _pushPower = 2f;
 
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
@@ -264,5 +265,19 @@ namespace StarterAssets
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
-	}
+
+        private void OnControllerColliderHit(ControllerColliderHit collision)
+        {
+            if (collision.transform.tag == "Moving Box")
+			{
+				Rigidbody box = collision.collider.GetComponent<Rigidbody>();
+				if (box != null)
+				{
+					Debug.Log(collision.moveDirection);
+					Vector3 pushDirection = new Vector3(collision.moveDirection.x, 0, collision.moveDirection.z);
+					box.velocity = pushDirection * _pushPower;
+				}
+			}
+        }
+    }
 }

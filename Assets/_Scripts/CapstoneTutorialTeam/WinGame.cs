@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class WinGame : MonoBehaviour
@@ -11,5 +10,10 @@ public class WinGame : MonoBehaviour
         {
             winPanel.SetActive(true);
         }
+    }
+
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
