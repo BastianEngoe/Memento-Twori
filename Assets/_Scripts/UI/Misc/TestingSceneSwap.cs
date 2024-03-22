@@ -8,13 +8,20 @@ public class TestingSceneSwap : MonoBehaviour
 {
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        //check if in unity editor
+        if (Application.isEditor)
         {
-            SceneManager.LoadScene("Bootscreen");
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            SceneManager.LoadScene(1);
+            //check if the key is pressed
+            if (Keyboard.current.bKey.wasPressedThisFrame)
+            {
+                //load the bootscreen scene
+                SceneManager.LoadScene("Bootscreen");
+            }
+            if (Keyboard.current.gKey.wasPressedThisFrame)
+            {
+                //load the game scene
+                SceneManager.LoadScene(1);
+            }
         }
     }
 }

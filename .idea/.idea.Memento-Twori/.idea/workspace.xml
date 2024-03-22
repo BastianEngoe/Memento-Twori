@@ -6,28 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="d9efc296-d8c7-44f6-88e3-95de3f92e150" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Memento-Twori/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Memento-Twori/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Circle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FillBackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FillBackground.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FillBackgroundFill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FillBackgroundFill.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BootscreenConfirmButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BootscreenConfirmButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BootscreenPhaseFadeIn.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BootscreenPhaseFadeIn.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BrightnessThumbnail.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BrightnessThumbnail.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/FarmLevel/Materials/No Name.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/FarmLevel/Materials/No Name.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/No Name.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/No Name.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/ParabolicCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/ParabolicCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bootscreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Bootscreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/FarmGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FarmGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/SpriteAtlasses/GeneralUIAtlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/SpriteAtlasses/GeneralUIAtlas.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Fonts/LiberationSans.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Fonts/LiberationSans.ttf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Shaders/TMPro_Properties.cginc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Shaders/TMPro_Properties.cginc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Systems/HeldItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Systems/HeldItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Systems/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Systems/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Systems/PlayerLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Systems/PlayerLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/IntroRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/IntroRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/ScriptableObjects/BasicDialogueBank.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/ScriptableObjects/BasicDialogueBank.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Settings/Brightness.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Settings/Brightness.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Settings/SliderPercentage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Settings/SliderPercentage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Settings/SubtitleSize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Settings/SubtitleSize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/BootscreenDialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/BootscreenDialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/ClickToContinue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/ClickToContinue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/Misc/TestingSceneSwap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/Misc/TestingSceneSwap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/UI/PauseMenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/UI/PauseMenuButtons.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +37,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/BootscreenConfirmButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BootscreenPhaseFadeIn.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BrightnessThumbnail.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/CVDFilter/Scripts/CVDProfilesSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/UI/ClickToContinue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.navigation@2.0.0/Samples~/Scripts/MeshTool.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@3.0.1/Samples~/Shared Assets/Scripts/CursorLockManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -52,30 +56,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rider.run.widget.enabled.cache": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;SolutionBuilderGeneralOptionsPage&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\aedan\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\aedan\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\aedan\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\aedan\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\aedan\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\aedan\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.2.5f1\Editor\Unity.exe" />
@@ -140,6 +145,12 @@
       <workItem from="1709290694433" duration="2370000" />
       <workItem from="1709313852893" duration="1087000" />
       <workItem from="1709714379659" duration="4451000" />
+      <workItem from="1710496093591" duration="1151000" />
+      <workItem from="1710501603371" duration="8984000" />
+      <workItem from="1710879833120" duration="812000" />
+      <workItem from="1710881488974" duration="26000" />
+      <workItem from="1710924337794" duration="1908000" />
+      <workItem from="1711104771463" duration="16391000" />
     </task>
     <servers />
   </component>

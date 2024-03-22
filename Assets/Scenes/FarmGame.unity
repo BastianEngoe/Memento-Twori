@@ -506,6 +506,7 @@ MonoBehaviour:
   player: {fileID: 0}
   isNodding: 0
   isShaking: 0
+  checkInput: 0
   mascotSpeaker: {fileID: 0}
 --- !u!4 &22831400
 Transform:
@@ -3365,6 +3366,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1515494760}
     m_Modifications:
+    - target: {fileID: 40249311329691869, guid: 617df2c41355c3542b697696ae0e6121,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 35.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 66841455360496907, guid: 617df2c41355c3542b697696ae0e6121,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 35.55
+      objectReference: {fileID: 0}
     - target: {fileID: 361998856493267302, guid: 617df2c41355c3542b697696ae0e6121,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3530,6 +3541,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3990169636069763733, guid: 617df2c41355c3542b697696ae0e6121,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 35.55
+      objectReference: {fileID: 0}
     - target: {fileID: 4109578056928946314, guid: 617df2c41355c3542b697696ae0e6121,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3540,6 +3556,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4916739629709197633, guid: 617df2c41355c3542b697696ae0e6121,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 35.55
+      objectReference: {fileID: 0}
     - target: {fileID: 5247921425222041001, guid: 617df2c41355c3542b697696ae0e6121,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3549,6 +3570,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5625658074987351824, guid: 617df2c41355c3542b697696ae0e6121,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 35.55
       objectReference: {fileID: 0}
     - target: {fileID: 6582584494624798432, guid: 617df2c41355c3542b697696ae0e6121,
         type: 3}
@@ -4418,6 +4444,7 @@ MonoBehaviour:
   checkingCondition: 0
   performedCondition: 0
   nodded: 0
+  nodCondition: 0
 --- !u!4 &523846842
 Transform:
   m_ObjectHideFlags: 0
@@ -19426,8 +19453,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 426451587}
-  - {fileID: 1691763191}
   - {fileID: 1174301850}
+  - {fileID: 1691763191}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -25958,6 +25985,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 22831400}
+  - {fileID: 1868480564}
   - {fileID: 523846842}
   - {fileID: 1312355891}
   - {fileID: 986108484}
@@ -25973,7 +26001,6 @@ SceneRoots:
   - {fileID: 1152503065}
   - {fileID: 591888831}
   - {fileID: 2115993006}
-  - {fileID: 1868480564}
   - {fileID: 1827946788}
   - {fileID: 164441698701881761}
   - {fileID: 1949792442}

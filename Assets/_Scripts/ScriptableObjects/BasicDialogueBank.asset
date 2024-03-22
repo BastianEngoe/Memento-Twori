@@ -17,26 +17,27 @@ MonoBehaviour:
     voiceline: {fileID: 0}
     triggersEventWithName: 
     canClickToAdvance: 1
-  - dialogue: "Please adjust the \u2600 brightness that best fits for you"
+  - dialogue: "Please adjust the \u2600 <b>brightness</b> until the left fish is
+      barely visible, and the middle fish is clearly visible"
     voiceline: {fileID: 0}
-    triggersEventWithName: Show brightness slider
+    triggersEventWithName: Show brightness panel
     canClickToAdvance: 0
-  - dialogue: "Do you want to disable \U0001F4A1 flashing lights & \U0001F4A5 screen
-      effects?"
+  - dialogue: "Do you want to disable \U0001F4A1 <b>flashing lights</b> & \U0001F4A5
+      <b>screen effects?</b>"
     voiceline: {fileID: 0}
-    triggersEventWithName: Show screen effects option
+    triggersEventWithName: Show screen effects panel
     canClickToAdvance: 0
-  - dialogue: If you have difficulties with sight, I recommend enabling High Contrast
-      mode
+  - dialogue: If you have difficulties with sight, I recommend enabling <b>High Contrast
+      </b>mode
     voiceline: {fileID: 0}
-    triggersEventWithName: Show high contrast option
+    triggersEventWithName: Show high contrast panel
     canClickToAdvance: 0
   - dialogue: How far away from the screen are you sitting?
     voiceline: {fileID: 0}
-    triggersEventWithName: Show FOV setting
+    triggersEventWithName: Show FOV panel
     canClickToAdvance: 0
   - dialogue: "Don't worry if you change your mind, you can change any of these settings
-      via the \u23F8 Pause Menu."
+      via the \u23F8 <b>Pause Menu</b>."
     voiceline: {fileID: 0}
     triggersEventWithName: 
     canClickToAdvance: 1
