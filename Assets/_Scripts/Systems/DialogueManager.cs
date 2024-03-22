@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue asset")]
     [SerializeField] private DialogueBankScriptableObject dialogueBank;
     [SerializeField] private float elapsedTime;
-    [SerializeField] private int lineIndex, eventIndex;
+    [SerializeField] public int lineIndex, eventIndex;
 
     [SerializeField] private bool checkingCondition;
     [SerializeField] private bool performedCondition;

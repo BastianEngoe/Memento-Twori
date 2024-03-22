@@ -161,7 +161,7 @@ MonoBehaviour:
   - dialogue: Kjempebra! Du burde like spill, du er inni ett.
     voiceline: {fileID: 8300000, guid: b54cba3a39295ba4e8a10c6de91cffdb, type: 3}
     duration: 3.216
-    triggerEvent: 1
+    triggerEvent: 0
     conditionType: 0
   - dialogue: "H\xE6? Hei, kom igjen. Kom igjeeeen. Vi skal ha det fint."
     voiceline: {fileID: 8300000, guid: eafce00e52530054e8ca87d988025b56, type: 3}
@@ -201,7 +201,7 @@ MonoBehaviour:
   - dialogue: Da snakker vi!
     voiceline: {fileID: 8300000, guid: e95c7a775df6e9e42937b81bfdffb318, type: 3}
     duration: 0.936
-    triggerEvent: 1
+    triggerEvent: 0
     conditionType: 0
   - dialogue: "Kom igjeeeeeen. Ogs\xE5 har du ikke egentlig et valg, s\xE5. "
     voiceline: {fileID: 8300000, guid: 2f9e1fda2625f78438dbc66044766fc3, type: 3}
@@ -246,5 +246,5 @@ MonoBehaviour:
       g\xE5 gjennom. Og da har du VUNNET."
     voiceline: {fileID: 8300000, guid: 5cde2a45e5dceeb4cbcc68fd4831a3a6, type: 3}
     duration: 4.272
-    triggerEvent: 1
+    triggerEvent: 0
     conditionType: 0
