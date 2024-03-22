@@ -11686,6 +11686,7 @@ MonoBehaviour:
   checkingCondition: 0
   performedCondition: 0
   nodded: 0
+  nodCondition: 0
 --- !u!4 &1240106681
 Transform:
   m_ObjectHideFlags: 0
@@ -12529,12 +12530,17 @@ PrefabInstance:
     - target: {fileID: 3765487953025949209, guid: 7b5c0965116fd8d46869661b165587d3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5140569323005844146, guid: 7b5c0965116fd8d46869661b165587d3,
         type: 3}
       propertyPath: m_Name
       value: Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140569323005844146, guid: 7b5c0965116fd8d46869661b165587d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8922133913409149681, guid: 7b5c0965116fd8d46869661b165587d3,
         type: 3}
@@ -13465,6 +13471,7 @@ MonoBehaviour:
   player: {fileID: 0}
   isNodding: 0
   isShaking: 0
+  checkInput: 0
   mascotSpeaker: {fileID: 217524555}
 --- !u!4 &1963711609
 Transform:

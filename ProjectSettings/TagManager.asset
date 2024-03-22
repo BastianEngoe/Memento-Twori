@@ -11,6 +11,8 @@ TagManager:
   - Chicken
   - Pig
   - Cow
+  - Plant
+  - Moving Box
   - Interactable
   layers:
   - Default
