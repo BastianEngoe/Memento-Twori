@@ -3,6 +3,7 @@ using DG.Tweening;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine.Events;
 
 /// <summary>
@@ -15,6 +16,7 @@ public class HeldItem : MonoBehaviour
 {
     public static HeldItem instance;
     
+    [Header("Held item variables")]
     [SerializeField] private bool holdingItem = false;
     public GameObject heldItem;
     public List<GameObject> potentialPickups;
@@ -22,15 +24,12 @@ public class HeldItem : MonoBehaviour
 
     [SerializeField] private ItemDatabaseScriptableObject items;
 
+    [Header("Outline shader variables")]
     [SerializeField] private Material outlineShader;
     [SerializeField] private Material[] matArray;
     [SerializeField] private List<Material> matArray2;
 
     [Header("Farming events")]
-    public string tag;
-    public UnityEvent onFarmItemUse;
-    public bool clearEventOnUse = false;
-    
     public GameObject inventoryItem;
 
     public UnityEvent onPickupItem;
@@ -277,7 +276,7 @@ public class HeldItem : MonoBehaviour
                 Destroy(inventoryItem);
             }
             heldItem = item;
-            inventoryItem = Instantiate(item, transform);
+            inventoryItem = PrefabUtility.InstantiatePrefab(item, transform) as GameObject;
         }
         else
         {
@@ -338,13 +337,11 @@ public class HeldItem : MonoBehaviour
 
             if (inventoryItem && Input.GetMouseButtonUp(0))
             {
-                if (Vector3.Distance(GetClosestTaggedObject(tag).position, transform.position) < 3f)
+                //Debug.Log(inventoryItem.name);
+                
+                if (Vector3.Distance(GetClosestTaggedObject("Interactable").position, transform.position) < 3f)
                 {
-                    onFarmItemUse.Invoke();
-                    if (clearEventOnUse)
-                    {
-                        onFarmItemUse = null;
-                    }
+                    GetClosestTaggedObject("Interactable").GetComponent<ItemInteraction>().compareItem(inventoryItem);
                 }
             }
         }

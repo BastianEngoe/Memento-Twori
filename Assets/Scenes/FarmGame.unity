@@ -8792,6 +8792,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantingSpot
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -8799,7 +8804,23 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1209306309}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 985664414}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 985664413}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 985664412}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 985664411}
   m_SourcePrefab: {fileID: 100100000, guid: 47eda07a587d2234abe25cca7f70c3db, type: 3}
 --- !u!4 &985664406 stripped
 Transform:
@@ -8807,6 +8828,118 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 985664405}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &985664407 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+    type: 3}
+  m_PrefabInstance: {fileID: 985664405}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &985664411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985664407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b754634cebf78814c97c705857c73bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoePrefab: {fileID: 6483399843328791862, guid: 5398143fa181fcb4093dcaef0ac49a85,
+    type: 3}
+  seedPrefab: {fileID: 8689696221235126439, guid: c1d5054e2267f1649b69273937412c2b,
+    type: 3}
+  wateringCanPrefab: {fileID: 9074590585776664770, guid: c7fad83dde403d145b11920aedcd644a,
+    type: 3}
+  curPlantState: 0
+--- !u!114 &985664412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985664407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2312ae363113e424882c8ce9335f1b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onItemInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 985664411}
+        m_TargetAssemblyTypeName: PlantController, Assembly-CSharp
+        m_MethodName: UpdatePlant
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemPrefab: {fileID: 9074590585776664770, guid: c7fad83dde403d145b11920aedcd644a,
+    type: 3}
+--- !u!114 &985664413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985664407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2312ae363113e424882c8ce9335f1b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onItemInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 985664411}
+        m_TargetAssemblyTypeName: PlantController, Assembly-CSharp
+        m_MethodName: UpdatePlant
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemPrefab: {fileID: 8689696221235126439, guid: c1d5054e2267f1649b69273937412c2b,
+    type: 3}
+--- !u!114 &985664414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985664407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2312ae363113e424882c8ce9335f1b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onItemInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 985664411}
+        m_TargetAssemblyTypeName: PlantController, Assembly-CSharp
+        m_MethodName: UpdatePlant
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemPrefab: {fileID: 6483399843328791862, guid: 5398143fa181fcb4093dcaef0ac49a85,
+    type: 3}
 --- !u!1 &986108483
 GameObject:
   m_ObjectHideFlags: 0
@@ -17621,6 +17754,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantingSpot
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -17628,7 +17771,23 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 260132511}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1380366975}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1380366980}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1380366979}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1380366978}
   m_SourcePrefab: {fileID: 100100000, guid: 47eda07a587d2234abe25cca7f70c3db, type: 3}
 --- !u!4 &1380366973 stripped
 Transform:
@@ -17636,6 +17795,118 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1380366972}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1380366974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+    type: 3}
+  m_PrefabInstance: {fileID: 1380366972}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1380366975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380366974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2312ae363113e424882c8ce9335f1b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onItemInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1380366978}
+        m_TargetAssemblyTypeName: PlantController, Assembly-CSharp
+        m_MethodName: UpdatePlant
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Step1
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemPrefab: {fileID: 6483399843328791862, guid: 5398143fa181fcb4093dcaef0ac49a85,
+    type: 3}
+--- !u!114 &1380366978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380366974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b754634cebf78814c97c705857c73bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoePrefab: {fileID: 6483399843328791862, guid: 5398143fa181fcb4093dcaef0ac49a85,
+    type: 3}
+  seedPrefab: {fileID: 8689696221235126439, guid: c1d5054e2267f1649b69273937412c2b,
+    type: 3}
+  wateringCanPrefab: {fileID: 9074590585776664770, guid: c7fad83dde403d145b11920aedcd644a,
+    type: 3}
+  curPlantState: 0
+--- !u!114 &1380366979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380366974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2312ae363113e424882c8ce9335f1b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onItemInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1380366978}
+        m_TargetAssemblyTypeName: PlantController, Assembly-CSharp
+        m_MethodName: UpdatePlant
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemPrefab: {fileID: 9074590585776664770, guid: c7fad83dde403d145b11920aedcd644a,
+    type: 3}
+--- !u!114 &1380366980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380366974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2312ae363113e424882c8ce9335f1b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onItemInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1380366978}
+        m_TargetAssemblyTypeName: PlantController, Assembly-CSharp
+        m_MethodName: UpdatePlant
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemPrefab: {fileID: 8689696221235126439, guid: c1d5054e2267f1649b69273937412c2b,
+    type: 3}
 --- !u!1 &1385418310 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 346d67d08d71ec647b32cb3b56576464,
@@ -24171,6 +24442,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantingSpot
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -24178,7 +24459,23 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1524218150}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036119312}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036119317}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036119316}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2036119315}
   m_SourcePrefab: {fileID: 100100000, guid: 47eda07a587d2234abe25cca7f70c3db, type: 3}
 --- !u!4 &2036119310 stripped
 Transform:
@@ -24186,6 +24483,118 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2036119309}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2036119311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 47eda07a587d2234abe25cca7f70c3db,
+    type: 3}
+  m_PrefabInstance: {fileID: 2036119309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2036119312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036119311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2312ae363113e424882c8ce9335f1b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onItemInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2036119315}
+        m_TargetAssemblyTypeName: PlantController, Assembly-CSharp
+        m_MethodName: UpdatePlant
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Step1
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemPrefab: {fileID: 6483399843328791862, guid: 5398143fa181fcb4093dcaef0ac49a85,
+    type: 3}
+--- !u!114 &2036119315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036119311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b754634cebf78814c97c705857c73bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoePrefab: {fileID: 6483399843328791862, guid: 5398143fa181fcb4093dcaef0ac49a85,
+    type: 3}
+  seedPrefab: {fileID: 8689696221235126439, guid: c1d5054e2267f1649b69273937412c2b,
+    type: 3}
+  wateringCanPrefab: {fileID: 9074590585776664770, guid: c7fad83dde403d145b11920aedcd644a,
+    type: 3}
+  curPlantState: 0
+--- !u!114 &2036119316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036119311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2312ae363113e424882c8ce9335f1b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onItemInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2036119315}
+        m_TargetAssemblyTypeName: PlantController, Assembly-CSharp
+        m_MethodName: UpdatePlant
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemPrefab: {fileID: 9074590585776664770, guid: c7fad83dde403d145b11920aedcd644a,
+    type: 3}
+--- !u!114 &2036119317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036119311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2312ae363113e424882c8ce9335f1b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onItemInteraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2036119315}
+        m_TargetAssemblyTypeName: PlantController, Assembly-CSharp
+        m_MethodName: UpdatePlant
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemPrefab: {fileID: 8689696221235126439, guid: c1d5054e2267f1649b69273937412c2b,
+    type: 3}
 --- !u!1 &2051982294
 GameObject:
   m_ObjectHideFlags: 0

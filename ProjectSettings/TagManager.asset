@@ -11,7 +11,7 @@ TagManager:
   - Chicken
   - Pig
   - Cow
-  - Plant
+  - Interactable
   layers:
   - Default
   - TransparentFX
