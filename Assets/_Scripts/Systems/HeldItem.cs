@@ -276,7 +276,7 @@ public class HeldItem : MonoBehaviour
                 Destroy(inventoryItem);
             }
             heldItem = item;
-            inventoryItem = PrefabUtility.InstantiatePrefab(item, transform) as GameObject;
+            inventoryItem = Instantiate(item, transform);
         }
         else
         {

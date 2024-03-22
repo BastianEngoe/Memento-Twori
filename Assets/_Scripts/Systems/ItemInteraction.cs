@@ -12,7 +12,7 @@ public class ItemInteraction : MonoBehaviour
     public void compareItem(GameObject itemPrefab)
     {
         //Debug.Log("Held item is: " + itemPrefab.name + " and required item is: " + this.itemPrefab.name);
-        if (itemPrefab.name == this.itemPrefab.name)
+        if (itemPrefab.name == this.itemPrefab.name + "(Clone)")
         {
             onItemInteraction.Invoke();
             Destroy(GetComponent<ItemInteraction>());
