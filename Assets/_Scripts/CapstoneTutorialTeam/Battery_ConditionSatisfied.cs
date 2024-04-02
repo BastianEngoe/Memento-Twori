@@ -17,16 +17,17 @@ public class Battery_ConditionSatisfied : MonoBehaviour
 
     private void Update()
     {
-        if (dialogueManager.lineIndex == 16)
+
+        if (Input.GetKeyUp(KeyCode.E) && canPickUp)
         {
-            if (Input.GetKeyUp(KeyCode.E) && canPickUp)
+            if (dialogueManager.lineIndex == 16)
             {
                 Debug.Log("External condition should be checked");
                 DialogueManager.instance.CheckExternalCondition();
-                hasPickedUp = true;
-                canPickUp = false;
-                canPutDown = true;
             }
+            hasPickedUp = true;
+            canPickUp = false;
+            canPutDown = true;
         }
         if (dialogueManager.lineIndex == 17)
         {

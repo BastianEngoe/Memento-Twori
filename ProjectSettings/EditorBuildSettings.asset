@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Bootscreen.unity
     guid: 89ca480d783db6c4d80467169a99fd7a
   - enabled: 0
+    path: Assets/Scenes/TutorialCapstone/NonExplicitTutorial.unity
+    guid: 74435cc43a5ec7247b788407deb60615
+  - enabled: 0
     path: Assets/Scenes/TutorialCapstone/DoylistTutorial.unity
     guid: d67087cd683c0974fbaeadfaaf09e596
   - enabled: 1
@@ -17,9 +20,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/IntroRoom.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/Scenes/TutorialCapstone/NonExplicitTutorial.unity
-    guid: 74435cc43a5ec7247b788407deb60615
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}
