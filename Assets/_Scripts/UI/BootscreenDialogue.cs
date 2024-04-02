@@ -32,6 +32,11 @@ public class BootscreenDialogue : MonoBehaviour
         SetCanvasGroupState(brightnessCanvasGroup, false);
         SetCanvasGroupState(highContrastCanvasGroup, false);
         SetCanvasGroupState(FOVCanvasGroup, false);
+        if (skipBootscreen)
+        {
+            dialogue.color = new Color(dialogue.color.r, dialogue.color.g, dialogue.color.b, 0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     void NextLine(BasicDialogueBankScriptableObject.DialogueLine lineType)
@@ -72,6 +77,12 @@ public class BootscreenDialogue : MonoBehaviour
             NextLine(dialogueBank.bootLines[lineIndex]);
         }
     }
+
+    public void ConfirmButtonToNextLine()
+    {
+        lineIndex++;
+        NextLine(dialogueBank.bootLines[lineIndex]);
+    }
     
     public void AdvanceToNextLine()
     {
@@ -80,7 +91,7 @@ public class BootscreenDialogue : MonoBehaviour
     }
    
 
-    public void ShowBrightnessSlider()
+    public void ShowBrightnessPanel()
     {
         SetCanvasGroupState(brightnessCanvasGroup, true);
         SetCanvasGroupState(screenEffectsCanvasGroup, false);
@@ -88,7 +99,7 @@ public class BootscreenDialogue : MonoBehaviour
         SetCanvasGroupState(FOVCanvasGroup, false);
     }
 
-    public void ShowScreenEffectsOption()
+    public void ShowScreenEffectsPanel()
     {
         SetCanvasGroupState(screenEffectsCanvasGroup, true);
         SetCanvasGroupState(brightnessCanvasGroup, false);
@@ -96,7 +107,7 @@ public class BootscreenDialogue : MonoBehaviour
         SetCanvasGroupState(FOVCanvasGroup, false);
     }
 
-    public void ShowHighContrastOption()
+    public void ShowHighContrastPanel()
     {
         SetCanvasGroupState(screenEffectsCanvasGroup, false);
         SetCanvasGroupState(brightnessCanvasGroup, false);
@@ -104,7 +115,7 @@ public class BootscreenDialogue : MonoBehaviour
         SetCanvasGroupState(FOVCanvasGroup, false);
     }
 
-    public void ShowFOVCanvas()
+    public void ShowFOVPanel()
     {
         SetCanvasGroupState(screenEffectsCanvasGroup, false);
         SetCanvasGroupState(brightnessCanvasGroup, false);

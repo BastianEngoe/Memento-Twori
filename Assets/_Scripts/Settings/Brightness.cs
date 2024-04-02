@@ -12,15 +12,22 @@ public class Brightness : MonoBehaviour
     private Volume volumePostProcess;
     [HideInInspector] public float brightnessValue; //Only for showing in the inspector
     [SerializeField] private GameObject resetButton;
+    private float defaultBrightnessSliderValue = 4;
     
     void Start()
     {
+        defaultBrightnessSliderValue = 4;
         
         volumePostProcess = Camera.main.GetComponent<Volume>();
         
         if (!brightnessSlider)
         {
             brightnessSlider = GameObject.Find("BrightnessSlider").GetComponent<Slider>();
+        }
+
+        if (!resetButton)
+        {
+            resetButton = GameObject.Find("BrightnessResetButton");
         }
         
         if (!PlayerPrefs.HasKey("Brightness"))
@@ -34,7 +41,7 @@ public class Brightness : MonoBehaviour
             brightnessValue = PlayerPrefs.GetFloat("Brightness");
             AdjustBrightness(brightnessValue + 3);
             brightnessSlider.value = brightnessValue + 3;
-            resetButton.GetComponent<Button>().interactable = brightnessValue != 0;
+            resetButton.GetComponent<Button>().interactable = brightnessValue != 3;
         }
         
         if (SceneManager.GetActiveScene().name == "Bootscreen")
@@ -48,11 +55,15 @@ public class Brightness : MonoBehaviour
     {
         if (volumePostProcess && volumePostProcess.profile.TryGet(out ColorAdjustments colorAdjustments))
         {
-            colorAdjustments.postExposure.value = value - 3;
+            colorAdjustments.postExposure.value = value - 4;
             brightnessValue = value - 3;
             PlayerPrefs.SetFloat("Brightness", value - 3);
             
-            if (value != 3f)
+            if (value == 3f)
+            {
+                resetButton.GetComponent<Button>().interactable = false;
+            }
+            else
             {
                 resetButton.GetComponent<Button>().interactable = true;
             }
@@ -62,10 +73,7 @@ public class Brightness : MonoBehaviour
     
     public void ResetBrightness()
     {
-        brightnessValue = 0;
-        brightnessSlider.value = 3;
-        PlayerPrefs.SetFloat("Brightness", 0);
-        AdjustBrightness(0);
-        resetButton.GetComponent<Button>().interactable = false;
+        AdjustBrightness(defaultBrightnessSliderValue);
+        brightnessSlider.value = defaultBrightnessSliderValue;
     }
 }

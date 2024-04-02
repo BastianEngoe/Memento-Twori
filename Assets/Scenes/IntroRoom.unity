@@ -431,6 +431,7 @@ MonoBehaviour:
   player: {fileID: 0}
   isNodding: 0
   isShaking: 0
+  checkInput: 0
   mascotSpeaker: {fileID: 1819882079}
 --- !u!4 &75404123
 Transform:
@@ -1311,10 +1312,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1392073894}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -421, y: -268}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.17843527, y: 0.10217285}
+  m_AnchorMax: {x: 0.81551635, y: 0.3331875}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1020273084
 MonoBehaviour:
@@ -1401,7 +1402,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 14.588104, y: -58.69792, z: -822.2739, w: 0}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1451,6 +1452,7 @@ MonoBehaviour:
   checkingCondition: 0
   performedCondition: 0
   nodded: 0
+  nodCondition: 0
 --- !u!4 &1117020920
 Transform:
   m_ObjectHideFlags: 0

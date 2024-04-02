@@ -8,6 +8,7 @@ public class SliderPercentage : MonoBehaviour
 {
     private TMP_Text textComponent;
     private Slider sliderComponent;
+    [SerializeField] private float maxArbitraryValue = 150;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class SliderPercentage : MonoBehaviour
             float percentage = 0;
             if (sliderComponent.maxValue != 0)
             {
-                percentage = (sliderComponent.value / sliderComponent.maxValue) * 150;
+                percentage = (sliderComponent.value / sliderComponent.maxValue) * maxArbitraryValue;
             }
             textComponent.text = $"{percentage:F0}%";
             yield return new WaitForSecondsRealtime(0.1f);

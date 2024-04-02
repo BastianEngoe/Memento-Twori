@@ -31,18 +31,19 @@ public class ClickToContinue : MonoBehaviour
         
         while (true)
         {
-            // Fade in
-            for (float t = 0; t <= 1; t += 2 * Time.unscaledDeltaTime)
+            canAdvance = true; // Allow the player to advance the dialogue
+            
+            
+            for (float t = 0; t <= 1; t += 2 * Time.unscaledDeltaTime) // Fade in
             {
                 canvasGroup.alpha = Mathf.Lerp(0, 1, t);
                 yield return null;
             }
-
+            
             yield return new WaitForSecondsRealtime(0.25f);
-            canAdvance = true;
-
-            // Fade out
-            for (float t = 0; t <= 1; t += 2 * Time.unscaledDeltaTime)
+            
+            
+            for (float t = 0; t <= 1; t += 2 * Time.unscaledDeltaTime) // Fade out
             {
                 canvasGroup.alpha = Mathf.Lerp(1, 0, t);
                 yield return null;
@@ -67,7 +68,7 @@ public class ClickToContinue : MonoBehaviour
     {
         if (dialogueManager.GetComponent<BootscreenDialogue>().dialogueBank.bootLines[dialogueManager.GetComponent<BootscreenDialogue>().lineIndex].canClickToAdvance)
         {
-            StartCoroutine(FadeInAndOut());
+            StartCoroutine(FadeInAndOut()); // If the line has autoAdvance set to true, fade in and out
         }
     }
     

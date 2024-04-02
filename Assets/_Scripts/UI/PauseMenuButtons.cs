@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuButtons : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PauseMenuButtons : MonoBehaviour
     private int timesLerpedButtonScale;
     private GameObject settingsPanel;
     private Volume _volume; // URP Volume
+    [SerializeField] private GameObject buttonsScalerObject;
 
     #region ToggleSFX variables
     [HideInInspector] public AudioMixer audioMixer; // Reference to the AudioMixer
@@ -37,6 +39,11 @@ public class PauseMenuButtons : MonoBehaviour
                 Debug.LogError("AudioMixer reference is not set in this GameObject " + gameObject.name);
             }
         }
+
+        if (!buttonsScalerObject && SceneManager.GetActiveScene().name != "Bootscreen")
+        {
+            buttonsScalerObject = GameObject.Find("PausePanel").GetComponent<PauseMenuButtons>().buttonsScalerObject;
+        }
         
         ResizeButtonSize();
     }
@@ -44,10 +51,10 @@ public class PauseMenuButtons : MonoBehaviour
     
     private void Update()
     {
-        if (name == "Paused_Icon" && Time.timeScale == 0)
-        {
-            PauseSymbolLerp();
-        }
+        // if (name == "Paused_Icon" && Time.timeScale == 0)
+        // {
+        //     PauseSymbolLerp();
+        // }
 
         if (hoveringOverButton)
         {
@@ -104,6 +111,11 @@ public class PauseMenuButtons : MonoBehaviour
         settingsPanel.GetComponent<Animator>().ResetTrigger("OpenSettings");
         
         ResizeButtonSize();
+        
+    }
+
+    public void OpenExtrasMenu()
+    {
         
     }
 
@@ -164,11 +176,17 @@ public class PauseMenuButtons : MonoBehaviour
 
     private void ResizeButtonSize()
     {
-        if (!PlayerPrefs.HasKey("SubtitleSize"))
+        if (buttonsScalerObject)
         {
-           
+            if (PlayerPrefs.HasKey("SubtitleSize"))
+            {
+                float subtitleSize = PlayerPrefs.GetFloat("SubtitleSize", 0); // Get the SubtitleSize value, default to 0 if it doesn't exist
+                subtitleSize = Mathf.Clamp(subtitleSize, 1, 5); // Ensure the subtitleSize is at least 1
+                float mappedSize = 1 + (0.5f * ((subtitleSize - 1) / 4)); // Map the subtitleSize from range 1-5 to 1-1.5
+                
+                buttonsScalerObject.GetComponent<RectTransform>().localScale = new Vector2(mappedSize, mappedSize); // Set the localScale
+            }
         }
-        
     }
     
 }
