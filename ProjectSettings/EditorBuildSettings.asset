@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Bootscreen.unity
     guid: 89ca480d783db6c4d80467169a99fd7a
   - enabled: 0
-    path: Assets/Scenes/TutorialCapstone/NonExplicitTutorial.unity
+    path: Assets/Scenes/NonExplicitTutorial.unity
     guid: 74435cc43a5ec7247b788407deb60615
   - enabled: 0
-    path: Assets/Scenes/TutorialCapstone/DoylistTutorial.unity
+    path: Assets/Scenes/DoylistTutorial.unity
     guid: d67087cd683c0974fbaeadfaaf09e596
   - enabled: 1
-    path: Assets/Scenes/TutorialCapstone/WatsonianTutorial.unity
+    path: Assets/Scenes/WatsonianTutorial.unity
     guid: fc62378da0b5d164b86c80938cad1917
   - enabled: 0
     path: Assets/Scenes/IntroRoom.unity
